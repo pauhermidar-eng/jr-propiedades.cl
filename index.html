@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="dc-helmet" content="1">
+<link rel="icon" type="image/png" href="img/da6e98259b93e488ce781392c8cd0189.png">
+<meta name="description" content="JR Propiedades: venta, arriendo y administración de propiedades en San Fernando y la Región de O’Higgins.">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Sora:wght@600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:3px solid #373736;outline-offset:2px}
+</style>
+
+
+<title>JR Propiedades - Inicio</title>
+<script src="support.js" defer></script>
+</head>
+<body>
+<template id="dc-template"><x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Sora:wght@600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:3px solid #373736;outline-offset:2px}
+</style>
+</helmet>
+<div style="width:100%;background:#FFFFFF;color:#373736;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.5">
+
+<!-- Barra superior -->
+<header style="background:linear-gradient(135deg,#373736 0%,#4A4A48 100%);color:#FFFFFF">
+<div style="max-width:1200px;margin:0 auto;padding:16px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+<a href="#inicio" style="display:flex;align-items:center;gap:12px">
+<img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:112px;width:auto;display:block;filter:brightness(0) invert(1)">
+</a>
+<nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 32px;font-weight:500;font-size:20px">
+<a href="#propiedades">Propiedades</a>
+<a href="#servicios">Servicios</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<a href="#vender" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;border:2px solid #FFFFFF;color:#FFFFFF;font-weight:700">Vende tu propiedad</a>
+<a href="#vender" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;background:{{accent}};color:#373736;font-weight:700">Arrienda tu propiedad</a>
+</div>
+</div>
+</header>
+
+<!-- Portada con buscador -->
+
+
+<!-- Propiedades destacadas -->
+<section id="inicio" style="background:linear-gradient(135deg,#373736 0%,#4A4A48 100%);color:#FFFFFF">
+<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px) clamp(48px,7vw,80px);display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:16px;max-width:760px">
+<p style="margin: 0; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 14px; color: {{accent}}; max-width: 100%">Gestión inmobiliaria personalizada para la Región de O’Higgins</p>
+<h1 style="margin: 0; font-family: 'Sora',sans-serif; font-weight: 700; font-size: clamp(36px,5vw,60px); line-height: 1.1; max-width: 100%">Encuentra tu próximo hogar</h1>
+<p style="margin:0;font-size:18px;color:#E2E2DE">Vendemos, arrendamos y administramos tu propiedad con un plan hecho a tu medida, para que se concrete rápido y en las mejores condiciones.</p>
+</div>
+<form style="background:#FFFFFF;color:#373736;border-radius:14px;padding:20px;display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end">
+<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:6px">
+<label for="modalidad" style="font-weight:700;font-size:14px">Modalidad</label>
+<select id="modalidad" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;background:#FFFFFF;color:#373736">
+<option>Todas las modalidades</option>
+<option>En venta</option>
+<option>En arriendo</option>
+</select>
+</div>
+<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:6px">
+<label for="tipo" style="font-weight:700;font-size:14px">Tipo de propiedad</label>
+<select id="tipo" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;background:#FFFFFF;color:#373736">
+<option>Todos los tipos</option>
+<option>Casa</option>
+<option>Departamento</option>
+<option>Parcela de agrado</option>
+<option>Terreno</option>
+<option>Local comercial</option>
+<option>Oficina</option>
+<option>Bodega</option>
+<option>Estacionamiento</option>
+</select>
+</div>
+<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:6px">
+<label for="comuna" style="font-weight:700;font-size:14px">Comuna</label>
+<select id="comuna" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;background:#FFFFFF;color:#373736">
+<option>Todas las comunas</option>
+<option>San Fernando</option>
+<option>Chimbarongo</option>
+<option>Nancagua</option>
+<option>Placilla</option>
+<option>Santa Cruz</option>
+<option>Palmilla</option>
+<option>Peralillo</option>
+<option>Lolol</option>
+<option>Pumanque</option>
+<option>Chépica</option>
+</select>
+</div>
+<button type="button" style="flex:1 1 160px;height:48px;border:0;border-radius:8px;background:{{accent}};color:#373736;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Buscar propiedades</button>
+</form>
+</div>
+</section><section id="propiedades" style="background:#F5F5F3">
+<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px);display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Propiedades destacadas</h2>
+<p style="margin:0;color:#54544F">Una selección de lo que tenemos disponible hoy.</p>
+</div>
+<a href="#propiedades" style="font-weight:700;border-bottom:2px solid {{accent}};padding-bottom:2px">Ver todas las propiedades</a>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+<sc-for list="{{props}}" as="p" hint-placeholder-count="6">
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+<sc-if value="{{ p.foto }}" hint-placeholder-val="{{ false }}">
+<img src="{{p.foto}}" alt="{{p.fotoAlt}}" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+</sc-if>
+<sc-if value="{{ p.venta }}" hint-placeholder-val="{{ true }}">
+<span style="position:absolute;top:14px;left:14px;background:#373736;color:#FFFFFF;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">En venta</span>
+</sc-if>
+<sc-if value="{{ p.arriendo }}" hint-placeholder-val="{{ false }}">
+<span style="position:absolute;top:14px;left:14px;background:#FFFFFF;color:#373736;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid #373736">Arriendo</span>
+</sc-if>
+<sc-if value="{{ p.arrendada }}" hint-placeholder-val="{{ false }}">
+<span style="position:absolute;top:14px;left:14px;background:{{accent}};color:#373736;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">Arrendada</span>
+</sc-if>
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="{{p.href}}">{{p.titulo}}</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">{{p.ubicacion}}</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">{{p.precio}}</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>{{p.dorm}} dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>{{p.banos}} baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>{{p.estac}} estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>{{p.m2}} m²</span>
+</span>
+</div>
+</div>
+</article>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- Vender / arrendar -->
+<section id="vender" style="background:#FFFFFF">
+<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;gap:24px">
+<div style="flex:1 1 440px;background:#373736;color:#FFFFFF;border-radius:16px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.2">¿Quieres vender tu propiedad?</h2>
+<p style="margin:0;color:#E2E2DE">Nos especializamos en seleccionar meticulosamente las propiedades con las que trabajamos, garantizando a nuestros clientes una alta probabilidad de éxito en la venta de sus inmuebles. Nuestro enfoque está en la calidad, no en la cantidad. Dedicamos tiempo y recursos a crear estrategias de venta personalizadas que nos permiten conectar propiedades excepcionales con compradores que buscan un lugar especial para vivir.</p>
+<a href="#contacto" style="display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:{{accent}};color:#373736;font-weight:700">Quiero vender</a>
+</div>
+<div style="flex:1 1 440px;background:#F5F5F3;border:1px solid #E4E4E0;border-radius:16px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.2">¿Quieres arrendar tu propiedad?</h2>
+<p style="margin:0;color:#54544F">Poner tu propiedad en arriendo no tiene por qué ser una preocupación. Nosotros buscamos y evaluamos con cuidado a cada postulante, para que tu inmueble quede en manos responsables, y nos encargamos de los contratos y del seguimiento. Así tú recibes tu renta con tranquilidad, mientras tu propiedad se mantiene bien cuidada.</p>
+<a href="#contacto" style="display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:#373736;color:#FFFFFF;font-weight:700">Quiero arrendar</a>
+</div>
+</div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios" style="background:#F5F5F3">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px,7vw,88px) clamp(16px,4vw,32px); display: flex; flex-direction: column; gap: 32px; position: relative">
+<div style="display:flex;flex-direction:column;gap:8px;max-width:640px">
+<span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#54544F">Qué hacemos</span>
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Nuestros Servicios</h2>
+<p style="margin: 0; color: #54544F">Si buscas vender, comprar o poner en arriendo tu propiedad en San Fernando y la provincia de Colchagua, diseñamos una estrategia a tu medida. Desde calcular el valor real de tu propiedad hasta la firma del contrato. Buscamos al arrendatario o comprador correcto, lo evaluamos a fondo y preparamos toda la "papeleria" para que tú no tengas que preocuparte de los trámites. Te acompañamos desde la primera visita hasta la entrega de tus llaves.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path><path d="M10 20v-6h4v6"></path></svg>
+</span>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Venta</h3>
+<p style="margin:0;color:#54544F;font-size:15px">Nuestro equipo te ayudará a comercializar tu propiedad de la manera correcta y con el público adecuado.</p>
+</div>
+<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"></circle><path d="M11 12l9-9"></path><path d="M17 6l3 3"></path><path d="M14 9l2 2"></path></svg>
+</span>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Arriendo</h3>
+<p style="margin:0;color:#54544F;font-size:15px">Si buscas arriendo o quieres arrendar tu propiedad, puedes dejar en nuestras manos todo el proceso</p>
+</div>
+<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="M8 15l4-4 3 3 5-6"></path></svg>
+</span>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Tasaciones</h3>
+<p style="margin:0;color:#54544F;font-size:15px">¿Quieres conocer el valor de tu propiedad? Solicita una tasación</p>
+</div>
+<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
+</span>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Administración</h3>
+<p style="margin:0;color:#54544F;font-size:15px">Si quieres olvidarte de administrar una propiedad, hazlo. Nosotros nos hacemos cargo de todo</p>
+</div>
+<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6"></path><circle cx="9" cy="20" r="1.2"></circle><circle cx="17" cy="20" r="1.2"></circle></svg>
+</span>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Compra</h3>
+<p style="margin:0;color:#54544F;font-size:15px">Si buscas comprar una propiedad, te acompañamos en la búsqueda y en todo el proceso hasta que recibas tus llaves</p>
+</div>
+<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16"></path><path d="M8 20h8"></path><path d="M5 7h14"></path><path d="M5 7l-3 7a3.5 3.5 0 0 0 6 0z"></path><path d="M19 7l-3 7a3.5 3.5 0 0 0 6 0z"></path></svg>
+</span>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Asesoría legal</h3>
+<p style="margin:0;color:#54544F;font-size:15px">Revisamos y preparamos contratos y documentos para que tu operación sea segura y sin sorpresas</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Nosotros -->
+
+
+<!-- Contacto -->
+
+
+<!-- Pie de página -->
+<section id="nosotros" style="background:#FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px,7vw,88px) clamp(16px,4vw,32px); display: flex; flex-wrap: wrap; gap: 40px; align-items: center; position: relative">
+<div style="flex:1 1 420px;display:flex;flex-direction:column;gap:16px">
+<div style="min-height:380px;border-radius:16px;overflow:hidden;background:#E3E3DF">
+<img src="img/b4e67945e0fc27e9ba670441694e0d71.jpg" alt="Corredora de JR Propiedades sosteniendo un juego de llaves" style="width:100%;height:100%;min-height:380px;object-fit:cover;object-position:50% 25%;display:block">
+</div>
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font-family:'Sora',sans-serif;font-weight:700;font-size:20px;color:#373736">Laura Jessica Reyes Mondaca</span>
+<span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#C8963E">Directora Ejecutiva</span>
+</div>
+</div>
+<div style="flex:1 1 420px;display:flex;flex-direction:column;gap:18px">
+<span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#54544F">Nosotros</span>
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Gestión a escala humana<br>y compromiso personal</h2>
+<p style="margin:0;color:#54544F">Para nosotros, ninguna propiedad es un número más en un catálogo. Llevamos 20 años en la región trabajando de una manera cercana: nos tomamos el tiempo de conocer tus prioridades para definir la estrategia que realmente te conviene.<br>Te acompañamos de forma directa en cada paso, negociando con criterio comercial y cuidando cada aspecto del negocio a fin de lograr un cierre ágil y exento de problemas.&nbsp;</p>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+<li style="display:flex;gap:12px;align-items:flex-start">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="{{accent}}" stroke="none"></circle><path d="M8 12l3 3 5-6"></path></svg>
+<span>Asesoría legal</span>
+</li>
+<li style="display:flex;gap:12px;align-items:flex-start">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="{{accent}}" stroke="none"></circle><path d="M8 12l3 3 5-6"></path></svg>
+<span>Tasaciones inmobiliarias</span>
+</li>
+<li style="display:flex;gap:12px;align-items:flex-start">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="{{accent}}" stroke="none"></circle><path d="M8 12l3 3 5-6"></path></svg>
+<span>Staff de obras menores y remodelaciones</span>
+</li>
+<li style="display:flex;gap:12px;align-items:flex-start">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="{{accent}}" stroke="none"></circle><path d="M8 12l3 3 5-6"></path></svg>
+<span>Arquitectura e Interiorismo</span>
+</li>
+</ul>
+<a href="#contacto" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:#373736;color:#FFFFFF;font-weight:700">Conversemos</a>
+</div>
+</div>
+</section><section id="contacto" style="background:#373736;color:#FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px,7vw,88px) clamp(16px,4vw,32px); display: flex; flex-wrap: wrap; gap: 40px; position: relative">
+<div style="flex:1 1 360px;display:flex;flex-direction:column;gap:18px">
+<span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#C8963E">Contacto</span>
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">¿Quieres vender tu propiedad?</h2>
+<p style="margin:0;color:#E2E2DE"><span style="color: rgb(255, 255, 255); font-family: Jost, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif; font-size: 17px; background-color: rgb(46, 46, 48)">Déjanos tus datos y un agente te contactará a la brevedad para diseñar la estrategia de tu propiedad.</span></p>
+<div style="display:flex;flex-direction:column;gap:10px;color:#E2E2DE">
+<a href="tel:+56990704040" style="color:#E2E2DE">+56 9 9070 4040</a>
+<a href="mailto:contacto@jr-propiedades.cl" style="color:#E2E2DE">contacto@jr-propiedades.cl</a>
+<a href="https://www.instagram.com/jessicareyespropiedades" target="_blank" rel="noopener" style="color:#E2E2DE">Instagram: @jessicareyespropiedades</a>
+<a href="https://www.facebook.com/profile.php?id=61595925120325" target="_blank" rel="noopener" style="color:#E2E2DE">Facebook: JR Propiedades</a>
+</div>
+<a href="https://wa.me/56990704040" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:{{accent}};color:#373736;font-weight:700">Escríbenos por WhatsApp</a>
+</div>
+<form style="flex:1 1 400px;background:#FFFFFF;color:#373736;border-radius:16px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:16px">
+<sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+<p role="status" style="margin:0;padding:16px;border-radius:10px;background:#F5F5F3;border:1px solid #E4E4E0;font-weight:700">¡Gracias! Hemos recibido tu consulta. Pronto nos pondremos en contacto.</p>
+</sc-if>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">Registra tus datos</h3>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="nombre" style="font-weight:700;font-size:14px">Nombre completo</label><input id="nombre" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="correo" style="font-weight:700;font-size:14px">Correo electrónico</label><input id="correo" type="email" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="telefono" style="font-weight:700;font-size:14px">Teléfono</label><input id="telefono" type="tel" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
+<div style="display:flex;flex-wrap:wrap;gap:16px"><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="necesitas" style="font-weight:700;font-size:14px">¿Qué necesitas?</label><select id="necesitas" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Vender</option><option>Arrendar</option><option>Comprar</option></select></div><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="tipo" style="font-weight:700;font-size:14px">Tipo de propiedad</label><select id="tipo" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Casa</option><option>Departamento</option><option>Parcela de agrado</option><option>Terreno</option><option>Local u oficina</option></select></div></div>
+<div style="display:flex;flex-wrap:wrap;gap:16px"><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="region" style="font-weight:700;font-size:14px">Región</label><select id="region" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Arica y Parinacota</option><option>Tarapacá</option><option>Antofagasta</option><option>Atacama</option><option>Coquimbo</option><option>Valparaíso</option><option>Metropolitana de Santiago</option><option>Libertador General Bernardo O’Higgins</option><option>Maule</option><option>Ñuble</option><option>Biobío</option><option>La Araucanía</option><option>Los Ríos</option><option>Los Lagos</option><option>Aysén</option><option>Magallanes y de la Antártica Chilena</option></select></div><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="comuna" style="font-weight:700;font-size:14px">Comuna</label><input id="comuna" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div></div>
+<label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4"><input type="checkbox" style="width:20px;height:20px;margin:0;flex:none">Acepto que JR Propiedades use estos datos solo para contactarme por mi solicitud.</label>
+<button type="button" onClick="{{send}}" style="height:48px;border:0;border-radius:8px;background:#373736;color:#FFFFFF;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Enviar</button>
+</form>
+</div>
+</section><footer style="background:#262625;color:#D2D2CD">
+<div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;font-size:14px">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px">
+<img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:56px;width:auto;display:block;filter:brightness(0) invert(1)">
+<span>© JR Propiedades · [Año]</span>
+</div>
+<nav style="display:flex;flex-wrap:wrap;gap:8px 24px">
+<a href="#propiedades">Propiedades</a>
+<a href="#servicios">Servicios</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+<a href="https://www.instagram.com/jessicareyespropiedades" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.facebook.com/profile.php?id=61595925120325" target="_blank" rel="noopener">Facebook</a>
+</nav>
+</div>
+</footer>
+
+</div>
+</x-dc></template>
+<div id="app">
+
+<div style="width:100%;background:#FFFFFF;color:#373736;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.5">
+
+
+<header style="background:linear-gradient(135deg,#373736 0%,#4A4A48 100%);color:#FFFFFF">
+<div style="max-width:1200px;margin:0 auto;padding:16px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+<a href="#inicio" style="display:flex;align-items:center;gap:12px">
+<img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:112px;width:auto;display:block;filter:brightness(0) invert(1)">
+</a>
+<nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 32px;font-weight:500;font-size:20px">
+<a href="#propiedades">Propiedades</a>
+<a href="#servicios">Servicios</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<a href="#vender" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;border:2px solid #FFFFFF;color:#FFFFFF;font-weight:700">Vende tu propiedad</a>
+<a href="#vender" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;background:#C8963E;color:#373736;font-weight:700">Arrienda tu propiedad</a>
+</div>
+</div>
+</header>
+
+
+
+
+
+<section id="inicio" style="background:linear-gradient(135deg,#373736 0%,#4A4A48 100%);color:#FFFFFF">
+<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px) clamp(48px,7vw,80px);display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:16px;max-width:760px">
+<p style="margin: 0; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 14px; color: #C8963E; max-width: 100%">Gestión inmobiliaria personalizada para la Región de O’Higgins</p>
+<h1 style="margin: 0; font-family: 'Sora',sans-serif; font-weight: 700; font-size: clamp(36px,5vw,60px); line-height: 1.1; max-width: 100%">Encuentra tu próximo hogar</h1>
+<p style="margin:0;font-size:18px;color:#E2E2DE">Vendemos, arrendamos y administramos tu propiedad con un plan hecho a tu medida, para que se concrete rápido y en las mejores condiciones.</p>
+</div>
+<form style="background:#FFFFFF;color:#373736;border-radius:14px;padding:20px;display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end">
+<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:6px">
+<label for="modalidad" style="font-weight:700;font-size:14px">Modalidad</label>
+<select id="modalidad" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;background:#FFFFFF;color:#373736">
+<option>Todas las modalidades</option>
+<option>En venta</option>
+<option>En arriendo</option>
+</select>
+</div>
+<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:6px">
+<label for="tipo" style="font-weight:700;font-size:14px">Tipo de propiedad</label>
+<select id="tipo" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;background:#FFFFFF;color:#373736">
+<option>Todos los tipos</option>
+<option>Casa</option>
+<option>Departamento</option>
+<option>Parcela de agrado</option>
+<option>Terreno</option>
+<option>Local comercial</option>
+<option>Oficina</option>
+<option>Bodega</option>
+<option>Estacionamiento</option>
+</select>
+</div>
+<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:6px">
+<label for="comuna" style="font-weight:700;font-size:14px">Comuna</label>
+<select id="comuna" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;background:#FFFFFF;color:#373736">
+<option>Todas las comunas</option>
+<option>San Fernando</option>
+<option>Chimbarongo</option>
+<option>Nancagua</option>
+<option>Placilla</option>
+<option>Santa Cruz</option>
+<option>Palmilla</option>
+<option>Peralillo</option>
+<option>Lolol</option>
+<option>Pumanque</option>
+<option>Chépica</option>
+</select>
+</div>
+<button type="button" style="flex:1 1 160px;height:48px;border:0;border-radius:8px;background:#C8963E;color:#373736;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Buscar propiedades</button>
+</form>
+</div>
+</section><section id="propiedades" style="background:#F5F5F3">
+<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px);display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Propiedades destacadas</h2>
+<p style="margin:0;color:#54544F">Una selección de lo que tenemos disponible hoy.</p>
+</div>
+<a href="#propiedades" style="font-weight:700;border-bottom:2px solid #C8963E;padding-bottom:2px">Ver todas las propiedades</a>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+
+<img src="img/3bfa75a452036966565d4c16574e3dc4.jpg" alt="Fachada de la casa con techo de tejas y pórtico de ladrillo" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+
+
+
+
+<span style="position:absolute;top:14px;left:14px;background:#C8963E;color:#373736;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">Arrendada</span>
+
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha.dc.html">Casa Guisepe Bartoluzzi</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">$ 1.500.000</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>5 dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>4 baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>2 estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>346 m²</span>
+</span>
+</div>
+</div>
+</article>
+
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+
+<img src="img/33c6e4670c8c5400a425c6adbd9c5c66.jpg" alt="Fachada del edificio Alto San Fernando" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+
+
+<span style="position:absolute;top:14px;left:14px;background:#373736;color:#FFFFFF;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">En venta</span>
+
+
+
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha2.dc.html">2D 2B Departamento, Alto San Fernando</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">UF 5.400</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>2 dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>2 baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>1 estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>64 m²</span>
+</span>
+</div>
+</div>
+</article>
+
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+
+<img src="img/31d5cd3c372f377096d7824dfe761f5a.jpg" alt="Living-comedor integrado a la cocina abierta" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+
+
+<span style="position:absolute;top:14px;left:14px;background:#373736;color:#FFFFFF;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">En venta</span>
+
+
+
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha3.dc.html">Departamento Tipo 2B, Edificio Alcázar</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">UF 6.800</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>2 dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>2 baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>1 estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>69 m²</span>
+</span>
+</div>
+</div>
+</article>
+
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+
+<img src="img/2c74789afef4f0a596e51b6a6cf52b6b.jpg" alt="Living-comedor luminoso con vista a la cordillera" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+
+
+<span style="position:absolute;top:14px;left:14px;background:#373736;color:#FFFFFF;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">En venta</span>
+
+
+
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha4.dc.html">Departamento Tipo 4, Edificio Alcázar</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">UF 6.900</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>2 dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>2 baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>– estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>74 m²</span>
+</span>
+</div>
+</div>
+</article>
+
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+
+<img src="img/b47ec5ed89c22143564ede9c16d249cd.jpg" alt="Living-comedor con ventanal a la terraza y vista a la cordillera" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+
+
+<span style="position:absolute;top:14px;left:14px;background:#373736;color:#FFFFFF;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">En venta</span>
+
+
+
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha5.dc.html">Departamento Tipo 5, Edificio Alcázar</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">UF 6.900</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>2 dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>2 baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>– estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>74 m²</span>
+</span>
+</div>
+</div>
+</article>
+
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+
+<img src="img/7be377991e54f53fa779035bdd86166b.jpg" alt="Living-comedor con piso flotante" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+
+
+
+<span style="position:absolute;top:14px;left:14px;background:#FFFFFF;color:#373736;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid #373736">Arriendo</span>
+
+
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha7.dc.html">Departamento 2D 2B E B, Edificio Alto San Fernando</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">$ 540.000</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>2 dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>2 baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>1 estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>60 m²</span>
+</span>
+</div>
+</div>
+</article>
+
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+
+<img src="img/da9a09632ab6d00633ea47b61b38b899.jpg" alt="Living con ventanal y acceso a la terraza" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+
+
+
+<span style="position:absolute;top:14px;left:14px;background:#FFFFFF;color:#373736;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid #373736">Arriendo</span>
+
+
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha8.dc.html">Departamento 2D 2B y E, Edificio Alto San Fernando</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">UF 15</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>2 dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>2 baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>1 estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>– m²</span>
+</span>
+</div>
+</div>
+</article>
+
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+
+<img src="img/c03f85d61bdd80a60054a8514f08e333.jpg" alt="Camino peatonal entre los edificios del condominio con áreas verdes" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+
+
+<span style="position:absolute;top:14px;left:14px;background:#373736;color:#FFFFFF;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">En venta</span>
+
+
+
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha9.dc.html">Departamento 3D 2B y E, Condominio Puerta del Sur</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">UF 2.671</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>3 dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>2 baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>1 estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>– m²</span>
+</span>
+</div>
+</div>
+</article>
+
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+
+<img src="img/a741ffc5d93828bb6643c4f8b030c10f.jpg" alt="Senderos y árboles en el condominio" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+
+
+
+<span style="position:absolute;top:14px;left:14px;background:#FFFFFF;color:#373736;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid #373736">Arriendo</span>
+
+
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha10.dc.html">Departamento 2D 2B y E, Condominio Puerta del Sur</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">$ 400.000</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>2 dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>2 baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>1 estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>– m²</span>
+</span>
+</div>
+</div>
+</article>
+
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+
+<img src="img/12b058a4a0fd1fb33daba477c7feebda.jpg" alt="Living-comedor amoblado con ventanal a la terraza" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+
+
+
+<span style="position:absolute;top:14px;left:14px;background:#FFFFFF;color:#373736;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid #373736">Arriendo</span>
+
+
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha11.dc.html">Departamento 3D 2B y E Amoblado, Condominio Puerta del Sur</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">$ 680.000</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>3 dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>2 baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>1 estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>– m²</span>
+</span>
+</div>
+</div>
+</article>
+
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+
+<img src="img/c0a3944b31b2841eb4b3230888d29d3c.jpg" alt="Fachada del Condominio Don Olegario" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+
+
+
+
+<span style="position:absolute;top:14px;left:14px;background:#C8963E;color:#373736;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">Arrendada</span>
+
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha12.dc.html">Departamento 2D 2B y E, Condominio Don Olegario</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">$ 400.000</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>2 dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>2 baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>1 estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>– m²</span>
+</span>
+</div>
+</div>
+</article>
+
+<article style="flex:1 1 320px;max-width:100%;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E4E0;display:flex;flex-direction:column">
+<div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
+<span>Foto de la propiedad</span>
+
+<img src="img/0942302e53bc84b497ddbb18dda2ced9.jpg" alt="Frente de la casa con vista a la cordillera" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+
+
+<span style="position:absolute;top:14px;left:14px;background:#373736;color:#FFFFFF;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">En venta</span>
+
+
+
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha6.dc.html">Casa Condominio Parcelación Ecológica</a></h3>
+<p style="margin:0;color:#54544F;font-size:15px">Camino a Los Maquis, Pelequén, Región del Libertador Bernardo O’Higgins</p>
+<p style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">UF 11.200</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
+<span>4 dorm.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M8 19l-1 2M16 19l1 2"></path></svg>
+<span>3 baños</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5a2 2 0 0 1 1.9-1.4h7.2a2 2 0 0 1 1.9 1.4L19 16"></path><rect x="3" y="16" width="18" height="4" rx="1.5"></rect><circle cx="7.5" cy="18" r="0.6"></circle><circle cx="16.5" cy="18" r="0.6"></circle></svg>
+<span>Varios estac.</span>
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h4M3 15h4M9 3v4M15 3v4"></path></svg>
+<span>215 m²</span>
+</span>
+</div>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+
+<section id="vender" style="background:#FFFFFF">
+<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;gap:24px">
+<div style="flex:1 1 440px;background:#373736;color:#FFFFFF;border-radius:16px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.2">¿Quieres vender tu propiedad?</h2>
+<p style="margin:0;color:#E2E2DE">Nos especializamos en seleccionar meticulosamente las propiedades con las que trabajamos, garantizando a nuestros clientes una alta probabilidad de éxito en la venta de sus inmuebles. Nuestro enfoque está en la calidad, no en la cantidad. Dedicamos tiempo y recursos a crear estrategias de venta personalizadas que nos permiten conectar propiedades excepcionales con compradores que buscan un lugar especial para vivir.</p>
+<a href="#contacto" style="display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:#C8963E;color:#373736;font-weight:700">Quiero vender</a>
+</div>
+<div style="flex:1 1 440px;background:#F5F5F3;border:1px solid #E4E4E0;border-radius:16px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.2">¿Quieres arrendar tu propiedad?</h2>
+<p style="margin:0;color:#54544F">Poner tu propiedad en arriendo no tiene por qué ser una preocupación. Nosotros buscamos y evaluamos con cuidado a cada postulante, para que tu inmueble quede en manos responsables, y nos encargamos de los contratos y del seguimiento. Así tú recibes tu renta con tranquilidad, mientras tu propiedad se mantiene bien cuidada.</p>
+<a href="#contacto" style="display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:#373736;color:#FFFFFF;font-weight:700">Quiero arrendar</a>
+</div>
+</div>
+</section>
+
+
+<section id="servicios" style="background:#F5F5F3">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px,7vw,88px) clamp(16px,4vw,32px); display: flex; flex-direction: column; gap: 32px; position: relative">
+<div style="display:flex;flex-direction:column;gap:8px;max-width:640px">
+<span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#54544F">Qué hacemos</span>
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Nuestros Servicios</h2>
+<p style="margin: 0; color: #54544F">Si buscas vender, comprar o poner en arriendo tu propiedad en San Fernando y la provincia de Colchagua, diseñamos una estrategia a tu medida. Desde calcular el valor real de tu propiedad hasta la firma del contrato. Buscamos al arrendatario o comprador correcto, lo evaluamos a fondo y preparamos toda la "papeleria" para que tú no tengas que preocuparte de los trámites. Te acompañamos desde la primera visita hasta la entrega de tus llaves.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path><path d="M10 20v-6h4v6"></path></svg>
+</span>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Venta</h3>
+<p style="margin:0;color:#54544F;font-size:15px">Nuestro equipo te ayudará a comercializar tu propiedad de la manera correcta y con el público adecuado.</p>
+</div>
+<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"></circle><path d="M11 12l9-9"></path><path d="M17 6l3 3"></path><path d="M14 9l2 2"></path></svg>
+</span>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Arriendo</h3>
+<p style="margin:0;color:#54544F;font-size:15px">Si buscas arriendo o quieres arrendar tu propiedad, puedes dejar en nuestras manos todo el proceso</p>
+</div>
+<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="M8 15l4-4 3 3 5-6"></path></svg>
+</span>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Tasaciones</h3>
+<p style="margin:0;color:#54544F;font-size:15px">¿Quieres conocer el valor de tu propiedad? Solicita una tasación</p>
+</div>
+<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
+</span>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Administración</h3>
+<p style="margin:0;color:#54544F;font-size:15px">Si quieres olvidarte de administrar una propiedad, hazlo. Nosotros nos hacemos cargo de todo</p>
+</div>
+<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6"></path><circle cx="9" cy="20" r="1.2"></circle><circle cx="17" cy="20" r="1.2"></circle></svg>
+</span>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Compra</h3>
+<p style="margin:0;color:#54544F;font-size:15px">Si buscas comprar una propiedad, te acompañamos en la búsqueda y en todo el proceso hasta que recibas tus llaves</p>
+</div>
+<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16"></path><path d="M8 20h8"></path><path d="M5 7h14"></path><path d="M5 7l-3 7a3.5 3.5 0 0 0 6 0z"></path><path d="M19 7l-3 7a3.5 3.5 0 0 0 6 0z"></path></svg>
+</span>
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Asesoría legal</h3>
+<p style="margin:0;color:#54544F;font-size:15px">Revisamos y preparamos contratos y documentos para que tu operación sea segura y sin sorpresas</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+<section id="nosotros" style="background:#FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px,7vw,88px) clamp(16px,4vw,32px); display: flex; flex-wrap: wrap; gap: 40px; align-items: center; position: relative">
+<div style="flex:1 1 420px;display:flex;flex-direction:column;gap:16px">
+<div style="min-height:380px;border-radius:16px;overflow:hidden;background:#E3E3DF">
+<img src="img/b4e67945e0fc27e9ba670441694e0d71.jpg" alt="Corredora de JR Propiedades sosteniendo un juego de llaves" style="width:100%;height:100%;min-height:380px;object-fit:cover;object-position:50% 25%;display:block">
+</div>
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font-family:'Sora',sans-serif;font-weight:700;font-size:20px;color:#373736">Laura Jessica Reyes Mondaca</span>
+<span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#C8963E">Directora Ejecutiva</span>
+</div>
+</div>
+<div style="flex:1 1 420px;display:flex;flex-direction:column;gap:18px">
+<span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#54544F">Nosotros</span>
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Gestión a escala humana<br>y compromiso personal</h2>
+<p style="margin:0;color:#54544F">Para nosotros, ninguna propiedad es un número más en un catálogo. Llevamos 20 años en la región trabajando de una manera cercana: nos tomamos el tiempo de conocer tus prioridades para definir la estrategia que realmente te conviene.<br>Te acompañamos de forma directa en cada paso, negociando con criterio comercial y cuidando cada aspecto del negocio a fin de lograr un cierre ágil y exento de problemas.&nbsp;</p>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+<li style="display:flex;gap:12px;align-items:flex-start">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#C8963E" stroke="none"></circle><path d="M8 12l3 3 5-6"></path></svg>
+<span>Asesoría legal</span>
+</li>
+<li style="display:flex;gap:12px;align-items:flex-start">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#C8963E" stroke="none"></circle><path d="M8 12l3 3 5-6"></path></svg>
+<span>Tasaciones inmobiliarias</span>
+</li>
+<li style="display:flex;gap:12px;align-items:flex-start">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#C8963E" stroke="none"></circle><path d="M8 12l3 3 5-6"></path></svg>
+<span>Staff de obras menores y remodelaciones</span>
+</li>
+<li style="display:flex;gap:12px;align-items:flex-start">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#C8963E" stroke="none"></circle><path d="M8 12l3 3 5-6"></path></svg>
+<span>Arquitectura e Interiorismo</span>
+</li>
+</ul>
+<a href="#contacto" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:#373736;color:#FFFFFF;font-weight:700">Conversemos</a>
+</div>
+</div>
+</section><section id="contacto" style="background:#373736;color:#FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px,7vw,88px) clamp(16px,4vw,32px); display: flex; flex-wrap: wrap; gap: 40px; position: relative">
+<div style="flex:1 1 360px;display:flex;flex-direction:column;gap:18px">
+<span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#C8963E">Contacto</span>
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">¿Quieres vender tu propiedad?</h2>
+<p style="margin:0;color:#E2E2DE"><span style="color: rgb(255, 255, 255); font-family: Jost, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif; font-size: 17px; background-color: rgb(46, 46, 48)">Déjanos tus datos y un agente te contactará a la brevedad para diseñar la estrategia de tu propiedad.</span></p>
+<div style="display:flex;flex-direction:column;gap:10px;color:#E2E2DE">
+<a href="tel:+56990704040" style="color:#E2E2DE">+56 9 9070 4040</a>
+<a href="mailto:contacto@jr-propiedades.cl" style="color:#E2E2DE">contacto@jr-propiedades.cl</a>
+<a href="https://www.instagram.com/jessicareyespropiedades" target="_blank" rel="noopener" style="color:#E2E2DE">Instagram: @jessicareyespropiedades</a>
+<a href="https://www.facebook.com/profile.php?id=61595925120325" target="_blank" rel="noopener" style="color:#E2E2DE">Facebook: JR Propiedades</a>
+</div>
+<a href="https://wa.me/56990704040" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:#C8963E;color:#373736;font-weight:700">Escríbenos por WhatsApp</a>
+</div>
+<form style="flex:1 1 400px;background:#FFFFFF;color:#373736;border-radius:16px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:16px">
+
+<h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">Registra tus datos</h3>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="nombre" style="font-weight:700;font-size:14px">Nombre completo</label><input id="nombre" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="correo" style="font-weight:700;font-size:14px">Correo electrónico</label><input id="correo" type="email" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="telefono" style="font-weight:700;font-size:14px">Teléfono</label><input id="telefono" type="tel" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
+<div style="display:flex;flex-wrap:wrap;gap:16px"><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="necesitas" style="font-weight:700;font-size:14px">¿Qué necesitas?</label><select id="necesitas" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Vender</option><option>Arrendar</option><option>Comprar</option></select></div><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="tipo" style="font-weight:700;font-size:14px">Tipo de propiedad</label><select id="tipo" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Casa</option><option>Departamento</option><option>Parcela de agrado</option><option>Terreno</option><option>Local u oficina</option></select></div></div>
+<div style="display:flex;flex-wrap:wrap;gap:16px"><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="region" style="font-weight:700;font-size:14px">Región</label><select id="region" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Arica y Parinacota</option><option>Tarapacá</option><option>Antofagasta</option><option>Atacama</option><option>Coquimbo</option><option>Valparaíso</option><option>Metropolitana de Santiago</option><option>Libertador General Bernardo O’Higgins</option><option>Maule</option><option>Ñuble</option><option>Biobío</option><option>La Araucanía</option><option>Los Ríos</option><option>Los Lagos</option><option>Aysén</option><option>Magallanes y de la Antártica Chilena</option></select></div><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="comuna" style="font-weight:700;font-size:14px">Comuna</label><input id="comuna" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div></div>
+<label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4"><input type="checkbox" style="width:20px;height:20px;margin:0;flex:none">Acepto que JR Propiedades use estos datos solo para contactarme por mi solicitud.</label>
+<button type="button" style="height:48px;border:0;border-radius:8px;background:#373736;color:#FFFFFF;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Enviar</button>
+</form>
+</div>
+</section><footer style="background:#262625;color:#D2D2CD">
+<div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;font-size:14px">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px">
+<img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:56px;width:auto;display:block;filter:brightness(0) invert(1)">
+<span>© JR Propiedades · [Año]</span>
+</div>
+<nav style="display:flex;flex-wrap:wrap;gap:8px 24px">
+<a href="#propiedades">Propiedades</a>
+<a href="#servicios">Servicios</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+<a href="https://www.instagram.com/jessicareyespropiedades" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.facebook.com/profile.php?id=61595925120325" target="_blank" rel="noopener">Facebook</a>
+</nav>
+</div>
+</footer>
+
+</div>
+</div>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#C8963E","options":["#C8963E","#3FA593","#E07A5F","#6C8EDB"]},"$preview":{"width":1360,"height":3600}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { sent: false };
+  }
+  renderVals() {
+    const t = 'Departamento Tipo 4 Edificio Alcázar';
+    const u = '[Barrio], [Comuna]';
+    const pr = 'UF 6.900';
+    return {
+      accent: this.props.accent ?? '#C8963E',
+      sent: this.state.sent,
+      send: () => this.setState({ sent: true }),
+      props: [
+        { href: 'Ficha.dc.html', titulo: 'Casa Guisepe Bartoluzzi', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: '$ 1.500.000', dorm: '5', banos: '4', estac: '2', m2: '346', venta: false, arriendo: false, arrendada: true, foto: 'img/3bfa75a452036966565d4c16574e3dc4.jpg', fotoAlt: 'Fachada de la casa con techo de tejas y pórtico de ladrillo' },
+        { href: 'Ficha2.dc.html', titulo: '2D 2B Departamento, Alto San Fernando', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: 'UF 5.400', dorm: '2', banos: '2', estac: '1', m2: '64', venta: true, arriendo: false, foto: 'img/33c6e4670c8c5400a425c6adbd9c5c66.jpg', fotoAlt: 'Fachada del edificio Alto San Fernando' },
+        { href: 'Ficha3.dc.html', titulo: 'Departamento Tipo 2B, Edificio Alcázar', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: 'UF 6.800', dorm: '2', banos: '2', estac: '1', m2: '69', venta: true, arriendo: false, foto: 'img/31d5cd3c372f377096d7824dfe761f5a.jpg', fotoAlt: 'Living-comedor integrado a la cocina abierta' },
+        { href: 'Ficha4.dc.html', titulo: 'Departamento Tipo 4, Edificio Alcázar', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: pr, dorm: '2', banos: '2', estac: '–', m2: '74', venta: true, arriendo: false, foto: 'img/2c74789afef4f0a596e51b6a6cf52b6b.jpg', fotoAlt: 'Living-comedor luminoso con vista a la cordillera' },
+        { href: 'Ficha5.dc.html', titulo: 'Departamento Tipo 5, Edificio Alcázar', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: pr, dorm: '2', banos: '2', estac: '–', m2: '74', venta: true, arriendo: false, foto: 'img/b47ec5ed89c22143564ede9c16d249cd.jpg', fotoAlt: 'Living-comedor con ventanal a la terraza y vista a la cordillera' },
+        { href: 'Ficha7.dc.html', titulo: 'Departamento 2D 2B E B, Edificio Alto San Fernando', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: '$ 540.000', dorm: '2', banos: '2', estac: '1', m2: '60', venta: false, arriendo: true, foto: 'img/7be377991e54f53fa779035bdd86166b.jpg', fotoAlt: 'Living-comedor con piso flotante' },
+        { href: 'Ficha8.dc.html', titulo: 'Departamento 2D 2B y E, Edificio Alto San Fernando', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: 'UF 15', dorm: '2', banos: '2', estac: '1', m2: '–', venta: false, arriendo: true, foto: 'img/da9a09632ab6d00633ea47b61b38b899.jpg', fotoAlt: 'Living con ventanal y acceso a la terraza' },
+        { href: 'Ficha9.dc.html', titulo: 'Departamento 3D 2B y E, Condominio Puerta del Sur', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: 'UF 2.671', dorm: '3', banos: '2', estac: '1', m2: '–', venta: true, arriendo: false, foto: 'img/c03f85d61bdd80a60054a8514f08e333.jpg', fotoAlt: 'Camino peatonal entre los edificios del condominio con áreas verdes' },
+        { href: 'Ficha10.dc.html', titulo: 'Departamento 2D 2B y E, Condominio Puerta del Sur', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: '$ 400.000', dorm: '2', banos: '2', estac: '1', m2: '–', venta: false, arriendo: true, foto: 'img/a741ffc5d93828bb6643c4f8b030c10f.jpg', fotoAlt: 'Senderos y árboles en el condominio' },
+        { href: 'Ficha11.dc.html', titulo: 'Departamento 3D 2B y E Amoblado, Condominio Puerta del Sur', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: '$ 680.000', dorm: '3', banos: '2', estac: '1', m2: '–', venta: false, arriendo: true, foto: 'img/12b058a4a0fd1fb33daba477c7feebda.jpg', fotoAlt: 'Living-comedor amoblado con ventanal a la terraza' },
+        { href: 'Ficha12.dc.html', foto: 'img/c0a3944b31b2841eb4b3230888d29d3c.jpg', fotoAlt: 'Fachada del Condominio Don Olegario', titulo: 'Departamento 2D 2B y E, Condominio Don Olegario', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: '$ 400.000', dorm: '2', banos: '2', estac: '1', m2: '–', venta: false, arriendo: false, arrendada: true },
+        { href: 'Ficha6.dc.html', titulo: 'Casa Condominio Parcelación Ecológica', ubicacion: 'Camino a Los Maquis, Pelequén, Región del Libertador Bernardo O’Higgins', precio: 'UF 11.200', dorm: '4', banos: '3', estac: 'Varios', m2: '215', venta: true, arriendo: false, foto: 'img/0942302e53bc84b497ddbb18dda2ced9.jpg', fotoAlt: 'Frente de la casa con vista a la cordillera' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
