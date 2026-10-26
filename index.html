@@ -288,7 +288,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 </div>
 <a href="https://wa.me/56990704040" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:{{accent}};color:#373736;font-weight:700">Escríbenos por WhatsApp</a>
 </div>
-<form style="flex:1 1 400px;background:#FFFFFF;color:#373736;border-radius:16px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:16px">
+<form id="contact-form" onsubmit="return false" style="flex:1 1 400px;background:#FFFFFF;color:#373736;border-radius:16px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:16px">
 <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
 <p role="status" style="margin:0;padding:16px;border-radius:10px;background:#F5F5F3;border:1px solid #E4E4E0;font-weight:700">¡Gracias! Hemos recibido tu consulta. Pronto nos pondremos en contacto.</p>
 </sc-if>
@@ -297,9 +297,10 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="display:flex;flex-direction:column;gap:6px"><label for="correo" style="font-weight:700;font-size:14px">Correo electrónico</label><input id="correo" type="email" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
 <div style="display:flex;flex-direction:column;gap:6px"><label for="telefono" style="font-weight:700;font-size:14px">Teléfono</label><input id="telefono" type="tel" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
 <div style="display:flex;flex-wrap:wrap;gap:16px"><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="necesitas" style="font-weight:700;font-size:14px">¿Qué necesitas?</label><select id="necesitas" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Vender</option><option>Arrendar</option><option>Comprar</option></select></div><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="tipo" style="font-weight:700;font-size:14px">Tipo de propiedad</label><select id="tipo" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Casa</option><option>Departamento</option><option>Parcela de agrado</option><option>Terreno</option><option>Local u oficina</option></select></div></div>
-<div style="display:flex;flex-wrap:wrap;gap:16px"><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="region" style="font-weight:700;font-size:14px">Región</label><select id="region" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Arica y Parinacota</option><option>Tarapacá</option><option>Antofagasta</option><option>Atacama</option><option>Coquimbo</option><option>Valparaíso</option><option>Metropolitana de Santiago</option><option>Libertador General Bernardo O’Higgins</option><option>Maule</option><option>Ñuble</option><option>Biobío</option><option>La Araucanía</option><option>Los Ríos</option><option>Los Lagos</option><option>Aysén</option><option>Magallanes y de la Antártica Chilena</option></select></div><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="comuna" style="font-weight:700;font-size:14px">Comuna</label><input id="comuna" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div></div>
-<label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4"><input type="checkbox" style="width:20px;height:20px;margin:0;flex:none">Acepto que JR Propiedades use estos datos solo para contactarme por mi solicitud.</label>
-<button type="button" onClick="{{send}}" style="height:48px;border:0;border-radius:8px;background:#373736;color:#FFFFFF;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Enviar</button>
+<div style="display:flex;flex-wrap:wrap;gap:16px"><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="region" style="font-weight:700;font-size:14px">Región</label><select id="region" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Arica y Parinacota</option><option>Tarapacá</option><option>Antofagasta</option><option>Atacama</option><option>Coquimbo</option><option>Valparaíso</option><option>Metropolitana de Santiago</option><option selected>Libertador General Bernardo O’Higgins</option><option>Maule</option><option>Ñuble</option><option>Biobío</option><option>La Araucanía</option><option>Los Ríos</option><option>Los Lagos</option><option>Aysén</option><option>Magallanes y de la Antártica Chilena</option></select></div><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="comuna" style="font-weight:700;font-size:14px">Comuna</label><input id="comuna" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div></div>
+<label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4"><input id="acepto" type="checkbox" style="width:20px;height:20px;margin:0;flex:none">Acepto que JR Propiedades use estos datos solo para contactarme por mi solicitud.</label>
+<p id="form-status" role="alert" aria-live="polite" style="margin:0;color:#B3261E;font-weight:700"></p>
+<button id="enviar" type="button" onClick="{{send}}" style="height:48px;border:0;border-radius:8px;background:#373736;color:#FFFFFF;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Enviar</button>
 </form>
 </div>
 </section><footer style="background:#262625;color:#D2D2CD">
@@ -984,16 +985,17 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 </div>
 <a href="https://wa.me/56990704040" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:#C8963E;color:#373736;font-weight:700">Escríbenos por WhatsApp</a>
 </div>
-<form style="flex:1 1 400px;background:#FFFFFF;color:#373736;border-radius:16px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:16px">
+<form id="contact-form" onsubmit="return false" style="flex:1 1 400px;background:#FFFFFF;color:#373736;border-radius:16px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:16px">
 
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:22px">Registra tus datos</h3>
 <div style="display:flex;flex-direction:column;gap:6px"><label for="nombre" style="font-weight:700;font-size:14px">Nombre completo</label><input id="nombre" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
 <div style="display:flex;flex-direction:column;gap:6px"><label for="correo" style="font-weight:700;font-size:14px">Correo electrónico</label><input id="correo" type="email" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
 <div style="display:flex;flex-direction:column;gap:6px"><label for="telefono" style="font-weight:700;font-size:14px">Teléfono</label><input id="telefono" type="tel" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
 <div style="display:flex;flex-wrap:wrap;gap:16px"><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="necesitas" style="font-weight:700;font-size:14px">¿Qué necesitas?</label><select id="necesitas" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Vender</option><option>Arrendar</option><option>Comprar</option></select></div><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="tipo" style="font-weight:700;font-size:14px">Tipo de propiedad</label><select id="tipo" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Casa</option><option>Departamento</option><option>Parcela de agrado</option><option>Terreno</option><option>Local u oficina</option></select></div></div>
-<div style="display:flex;flex-wrap:wrap;gap:16px"><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="region" style="font-weight:700;font-size:14px">Región</label><select id="region" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Arica y Parinacota</option><option>Tarapacá</option><option>Antofagasta</option><option>Atacama</option><option>Coquimbo</option><option>Valparaíso</option><option>Metropolitana de Santiago</option><option>Libertador General Bernardo O’Higgins</option><option>Maule</option><option>Ñuble</option><option>Biobío</option><option>La Araucanía</option><option>Los Ríos</option><option>Los Lagos</option><option>Aysén</option><option>Magallanes y de la Antártica Chilena</option></select></div><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="comuna" style="font-weight:700;font-size:14px">Comuna</label><input id="comuna" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div></div>
-<label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4"><input type="checkbox" style="width:20px;height:20px;margin:0;flex:none">Acepto que JR Propiedades use estos datos solo para contactarme por mi solicitud.</label>
-<button type="button" style="height:48px;border:0;border-radius:8px;background:#373736;color:#FFFFFF;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Enviar</button>
+<div style="display:flex;flex-wrap:wrap;gap:16px"><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="region" style="font-weight:700;font-size:14px">Región</label><select id="region" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"><option>Arica y Parinacota</option><option>Tarapacá</option><option>Antofagasta</option><option>Atacama</option><option>Coquimbo</option><option>Valparaíso</option><option>Metropolitana de Santiago</option><option selected="">Libertador General Bernardo O’Higgins</option><option>Maule</option><option>Ñuble</option><option>Biobío</option><option>La Araucanía</option><option>Los Ríos</option><option>Los Lagos</option><option>Aysén</option><option>Magallanes y de la Antártica Chilena</option></select></div><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px"><label for="comuna" style="font-weight:700;font-size:14px">Comuna</label><input id="comuna" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div></div>
+<label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4"><input id="acepto" type="checkbox" style="width:20px;height:20px;margin:0;flex:none">Acepto que JR Propiedades use estos datos solo para contactarme por mi solicitud.</label>
+<p id="form-status" role="alert" aria-live="polite" style="margin:0;color:#B3261E;font-weight:700"></p>
+<button id="enviar" type="button" style="height:48px;border:0;border-radius:8px;background:#373736;color:#FFFFFF;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Enviar</button>
 </form>
 </div>
 </section><footer style="background:#262625;color:#D2D2CD">
@@ -1028,7 +1030,41 @@ class Component extends DCLogic {
     return {
       accent: this.props.accent ?? '#C8963E',
       sent: this.state.sent,
-      send: () => this.setState({ sent: true }),
+      send: () => {
+        const q = (sel) => document.querySelector('#contact-form ' + sel);
+        const val = (sel) => ((q(sel) || {}).value || '').trim();
+        const status = document.getElementById('form-status');
+        const btn = document.getElementById('enviar');
+        const say = (m) => { if (status) status.textContent = m; };
+        const nombre = val('#nombre'), correo = val('#correo'), telefono = val('#telefono');
+        if (!nombre) { say('Por favor escribe tu nombre.'); return; }
+        if (!correo && !telefono) { say('Déjanos un correo o un teléfono para contactarte.'); return; }
+        if (correo && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correo)) { say('El correo no parece válido. Revísalo, por favor.'); return; }
+        if (!(q('#acepto') || {}).checked) { say('Debes aceptar el uso de tus datos para poder enviar.'); return; }
+        say('');
+        if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+        const body = {
+          Nombre: nombre, Correo: correo, Teléfono: telefono,
+          Necesita: val('#necesitas'), 'Tipo de propiedad': val('#tipo'),
+          Región: val('#region'), Comuna: val('#comuna'),
+          _subject: 'Nueva consulta desde jr-propiedades.cl', _template: 'table', _honey: ''
+        };
+        if (correo) body._replyto = correo;
+        fetch('https://formsubmit.co/ajax/contacto@jr-propiedades.cl', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(body)
+        })
+          .then((r) => r.json().then((d) => ({ ok: r.ok, d })))
+          .then(({ ok, d }) => {
+            if (ok && (d.success === true || d.success === 'true')) { this.setState({ sent: true }); }
+            else { throw new Error('envio'); }
+          })
+          .catch(() => {
+            say('No pudimos enviar tu consulta. Escríbenos por WhatsApp o al correo contacto@jr-propiedades.cl.');
+            if (btn) { btn.disabled = false; btn.textContent = 'Enviar'; }
+          });
+      },
       props: [
         { href: 'Ficha.dc.html', titulo: 'Casa Guisepe Bartoluzzi', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: '$ 1.500.000', dorm: '5', banos: '4', estac: '2', m2: '346', venta: false, arriendo: false, arrendada: true, foto: 'img/3bfa75a452036966565d4c16574e3dc4.jpg', fotoAlt: 'Fachada de la casa con techo de tejas y pórtico de ladrillo' },
         { href: 'Ficha2.dc.html', titulo: '2D 2B Departamento, Alto San Fernando', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: 'UF 5.400', dorm: '2', banos: '2', estac: '1', m2: '64', venta: true, arriendo: false, foto: 'img/33c6e4670c8c5400a425c6adbd9c5c66.jpg', fotoAlt: 'Fachada del edificio Alto San Fernando' },
