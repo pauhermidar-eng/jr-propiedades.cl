@@ -80,7 +80,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <section style="background:#FFFFFF">
 <div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,32px) 0;display:flex;flex-direction:column;gap:12px">
 <div style="position:relative;height:clamp(280px,52vw,560px);border-radius:14px;overflow:hidden;background:#262625">
-<img src="{{current.src}}" alt="{{current.alt}}" style="width:100%;height:100%;object-fit:{{current.fit}};display:block">
+<img src="{{current.src}}" alt="{{current.alt}}" style="width:100%;height:100%;object-fit:{{current.fit}};display:block;filter:grayscale(1)">
 <button type="button" onClick="{{prev}}" aria-label="Foto anterior" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:999px;border:0;background:#FFFFFF;color:#373736;cursor:pointer;display:flex;align-items:center;justify-content:center">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
 </button>
@@ -92,7 +92,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:4px">
 <sc-for list="{{thumbs}}" as="t" hint-placeholder-count="15">
 <button type="button" onClick="{{t.pick}}" aria-label="{{t.alt}}" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:{{t.border}}">
-<img src="{{t.src}}" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="{{t.src}}" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 </sc-for>
 </div>
@@ -306,7 +306,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <section style="background:#FFFFFF">
 <div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,32px) 0;display:flex;flex-direction:column;gap:12px">
 <div style="position:relative;height:clamp(280px,52vw,560px);border-radius:14px;overflow:hidden;background:#262625">
-<img src="img/3bfa75a452036966565d4c16574e3dc4.jpg" alt="Fachada de la casa con techo de tejas y pórtico de ladrillo" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/3bfa75a452036966565d4c16574e3dc4.jpg" alt="Fachada de la casa con techo de tejas y pórtico de ladrillo" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1)">
 <button type="button" aria-label="Foto anterior" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:999px;border:0;background:#FFFFFF;color:#373736;cursor:pointer;display:flex;align-items:center;justify-content:center">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
 </button>
@@ -318,87 +318,87 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:4px">
 
 <button type="button" aria-label="Ver foto 1: Fachada de la casa con techo de tejas y pórtico de ladrillo" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid #373736">
-<img src="img/3bfa75a452036966565d4c16574e3dc4.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/3bfa75a452036966565d4c16574e3dc4.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 2: Fachada posterior con terraza techada y jardín" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/362083456af05b87d968fc5d8b7f31f6.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/362083456af05b87d968fc5d8b7f31f6.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 3: Terraza techada y fachada posterior vistas desde el jardín" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/ead86da466b3c52963b285df4bb0e923.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/ead86da466b3c52963b285df4bb0e923.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 4: Living con vigas de madera y ventanal hacia el jardín y la piscina" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/8a9a20e6aeb8d8b89172cde9280d742f.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/8a9a20e6aeb8d8b89172cde9280d742f.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 5: Living y comedor con vigas de madera" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/4521493afe7af8f7447cd8376854cce4.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/4521493afe7af8f7447cd8376854cce4.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 6: Living amplio con salida al jardín" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/53e16bcfdda201390ae23b461088461f.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/53e16bcfdda201390ae23b461088461f.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 7: Jardín con piscina y pérgola" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/d5e0aa280e7c7c890beca6ab7c5d553c.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/d5e0aa280e7c7c890beca6ab7c5d553c.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 8: Jardín con piscina, pérgola y quincho al fondo" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/2b78627cb48cf969a2182b36ac675a6f.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/2b78627cb48cf969a2182b36ac675a6f.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 9: Quincho con parrilla de ladrillo y mesa alta" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/02e1959ee2d7c546990dcd9c9ea87777.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/02e1959ee2d7c546990dcd9c9ea87777.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 10: Hall de entrada con escalera y muro de ladrillo" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/15614ca501a23869339f7c14fc600bfa.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/15614ca501a23869339f7c14fc600bfa.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 11: Cocina amplia con muebles blancos" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/23aacf51c50c0fbf94d60f4248a8f09b.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/23aacf51c50c0fbf94d60f4248a8f09b.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 12: Cocina con cocina a gas y campana" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/01a62a142584268b3dd1adb8f60d000c.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/01a62a142584268b3dd1adb8f60d000c.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 13: Cocina con comedor de diario" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/57287265fe38cd3213bf12a669b95e17.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/57287265fe38cd3213bf12a669b95e17.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 14: Sala de estar con televisor y ventanal" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/6e6608c2d9cabe40a4264d7807c45f3c.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/6e6608c2d9cabe40a4264d7807c45f3c.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 15: Sala de estar con sofá y cuadro" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/2bc7c534a5b016c9806ee7e51c4dd8a2.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/2bc7c534a5b016c9806ee7e51c4dd8a2.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 16: Baño principal con tina y ducha" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/4395a8a5d0aab288a6285957b39344c4.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/4395a8a5d0aab288a6285957b39344c4.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 17: Dormitorio con dos camas" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/eba89a5fead27d5a96469d377db8498b.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/eba89a5fead27d5a96469d377db8498b.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 18: Dormitorio con ventanal al jardín" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/c44a6af53d7702063e664e2eb8df843c.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/c44a6af53d7702063e664e2eb8df843c.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 19: Dormitorio con cama matrimonial" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/c18f1273abb2ceb118803f948957ee90.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/c18f1273abb2ceb118803f948957ee90.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 20: Dormitorio con aire acondicionado y ventanal al jardín" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/dd61c15d83f65b33243b19f1600bfdc4.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/dd61c15d83f65b33243b19f1600bfdc4.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 21: Baño de visitas" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/b1d7cf70c1481796cbd9717078a53b4b.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/b1d7cf70c1481796cbd9717078a53b4b.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 </div>

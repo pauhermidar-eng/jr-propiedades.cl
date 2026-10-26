@@ -80,7 +80,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <section style="background:#FFFFFF">
 <div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,32px) 0;display:flex;flex-direction:column;gap:12px">
 <div style="position:relative;height:clamp(280px,52vw,560px);border-radius:14px;overflow:hidden;background:#262625">
-<img src="{{current.src}}" alt="{{current.alt}}" style="width:100%;height:100%;object-fit:{{current.fit}};display:block">
+<img src="{{current.src}}" alt="{{current.alt}}" style="width:100%;height:100%;object-fit:{{current.fit}};display:block;filter:grayscale(1)">
 <button type="button" onClick="{{prev}}" aria-label="Foto anterior" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:999px;border:0;background:#FFFFFF;color:#373736;cursor:pointer;display:flex;align-items:center;justify-content:center">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
 </button>
@@ -92,7 +92,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:4px">
 <sc-for list="{{thumbs}}" as="t" hint-placeholder-count="8">
 <button type="button" onClick="{{t.pick}}" aria-label="{{t.alt}}" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:{{t.border}}">
-<img src="{{t.src}}" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="{{t.src}}" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 </sc-for>
 </div>
@@ -294,7 +294,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <section style="background:#FFFFFF">
 <div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,32px) 0;display:flex;flex-direction:column;gap:12px">
 <div style="position:relative;height:clamp(280px,52vw,560px);border-radius:14px;overflow:hidden;background:#262625">
-<img src="img/c0a3944b31b2841eb4b3230888d29d3c.jpg" alt="Fachada del Condominio Don Olegario" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/c0a3944b31b2841eb4b3230888d29d3c.jpg" alt="Fachada del Condominio Don Olegario" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1)">
 <button type="button" aria-label="Foto anterior" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:999px;border:0;background:#FFFFFF;color:#373736;cursor:pointer;display:flex;align-items:center;justify-content:center">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
 </button>
@@ -306,55 +306,55 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:4px">
 
 <button type="button" aria-label="Ver foto 1: Fachada del Condominio Don Olegario" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid #373736">
-<img src="img/c0a3944b31b2841eb4b3230888d29d3c.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/c0a3944b31b2841eb4b3230888d29d3c.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 2: Living-comedor con piso flotante y acceso a la terraza" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/1182fc8f39982ee76ad33ce751bf016f.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/1182fc8f39982ee76ad33ce751bf016f.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 3: Living-comedor luminoso con ventanal a la terraza" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/1b7c801ea3a31c202c3b6d8e9d5093e3.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/1b7c801ea3a31c202c3b6d8e9d5093e3.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 4: Terraza larga con malla de protección" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/20d0cc5e98578ba5257706150a8bc45a.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/20d0cc5e98578ba5257706150a8bc45a.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 5: Terraza con vista a la cordillera" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/7aea89badcfa2839beec6980518cb63a.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/7aea89badcfa2839beec6980518cb63a.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 6: Cocina con muebles de madera, encimera y campana" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/1d1aa84267aa2525ae8c0098495074d2.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/1d1aa84267aa2525ae8c0098495074d2.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 7: Dormitorio principal con closet y ventana a la terraza" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/c724918d50cbdb00dc6a819177ae1da0.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/c724918d50cbdb00dc6a819177ae1da0.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 8: Dormitorio luminoso con ventanas en esquina" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/8db85738f2de20a4fa6276395f678c85.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/8db85738f2de20a4fa6276395f678c85.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 9: Dormitorio alfombrado con closet empotrado" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/5cb0e9fee008acaa0811ff68a2d89f96.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/5cb0e9fee008acaa0811ff68a2d89f96.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 10: Segundo dormitorio con ventana y piso alfombrado" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/abe64b34bd0ea35c889c00683188e133.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/abe64b34bd0ea35c889c00683188e133.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 11: Dormitorio con ventana y luz natural" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/26b010216cb32fab193075b1dce85e32.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/26b010216cb32fab193075b1dce85e32.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 12: Baño con tina y mueble de lavamanos" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/a78c5393e1f5adbb4ec30db0a544105c.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/a78c5393e1f5adbb4ec30db0a544105c.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 13: Área común con juegos infantiles y máquinas de ejercicio" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/6a79f7ec60ed378422c3e1de9a0238e7.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/6a79f7ec60ed378422c3e1de9a0238e7.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 </div>

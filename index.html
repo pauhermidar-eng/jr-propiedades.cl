@@ -119,7 +119,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
 <span>Foto de la propiedad</span>
 <sc-if value="{{ p.foto }}" hint-placeholder-val="{{ false }}">
-<img src="{{p.foto}}" alt="{{p.fotoAlt}}" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+<img src="{{p.foto}}" alt="{{p.fotoAlt}}" style="{{p.gris}}position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
 </sc-if>
 <sc-if value="{{ p.venta }}" hint-placeholder-val="{{ true }}">
 <span style="position:absolute;top:14px;left:14px;background:#373736;color:#FFFFFF;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">En venta</span>
@@ -413,7 +413,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
 <span>Foto de la propiedad</span>
 
-<img src="img/3bfa75a452036966565d4c16574e3dc4.jpg" alt="Fachada de la casa con techo de tejas y pórtico de ladrillo" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/3bfa75a452036966565d4c16574e3dc4.jpg" alt="Fachada de la casa con techo de tejas y pórtico de ladrillo" style="filter:grayscale(1);position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
 
 
 
@@ -783,7 +783,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
 <span>Foto de la propiedad</span>
 
-<img src="img/c0a3944b31b2841eb4b3230888d29d3c.jpg" alt="Fachada del Condominio Don Olegario" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/c0a3944b31b2841eb4b3230888d29d3c.jpg" alt="Fachada del Condominio Don Olegario" style="filter:grayscale(1);position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
 
 
 
@@ -1066,7 +1066,7 @@ class Component extends DCLogic {
           });
       },
       props: [
-        { href: 'Ficha.dc.html', titulo: 'Casa Guisepe Bartoluzzi', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: '$ 1.500.000', dorm: '5', banos: '4', estac: '2', m2: '346', venta: false, arriendo: false, arrendada: true, foto: 'img/3bfa75a452036966565d4c16574e3dc4.jpg', fotoAlt: 'Fachada de la casa con techo de tejas y pórtico de ladrillo' },
+        { href: 'Ficha.dc.html', titulo: 'Casa Guisepe Bartoluzzi', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: '$ 1.500.000', dorm: '5', banos: '4', estac: '2', m2: '346', venta: false, arriendo: false, arrendada: true, gris: 'filter:grayscale(1);', foto: 'img/3bfa75a452036966565d4c16574e3dc4.jpg', fotoAlt: 'Fachada de la casa con techo de tejas y pórtico de ladrillo' },
         { href: 'Ficha2.dc.html', titulo: '2D 2B Departamento, Alto San Fernando', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: 'UF 5.400', dorm: '2', banos: '2', estac: '1', m2: '64', venta: true, arriendo: false, foto: 'img/33c6e4670c8c5400a425c6adbd9c5c66.jpg', fotoAlt: 'Fachada del edificio Alto San Fernando' },
         { href: 'Ficha3.dc.html', titulo: 'Departamento Tipo 2B, Edificio Alcázar', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: 'UF 6.800', dorm: '2', banos: '2', estac: '1', m2: '69', venta: true, arriendo: false, foto: 'img/31d5cd3c372f377096d7824dfe761f5a.jpg', fotoAlt: 'Living-comedor integrado a la cocina abierta' },
         { href: 'Ficha4.dc.html', titulo: 'Departamento Tipo 4, Edificio Alcázar', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: pr, dorm: '2', banos: '2', estac: '–', m2: '74', venta: true, arriendo: false, foto: 'img/2c74789afef4f0a596e51b6a6cf52b6b.jpg', fotoAlt: 'Living-comedor luminoso con vista a la cordillera' },
@@ -1076,7 +1076,7 @@ class Component extends DCLogic {
         { href: 'Ficha9.dc.html', titulo: 'Departamento 3D 2B y E, Condominio Puerta del Sur', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: 'UF 2.671', dorm: '3', banos: '2', estac: '1', m2: '–', venta: true, arriendo: false, foto: 'img/c03f85d61bdd80a60054a8514f08e333.jpg', fotoAlt: 'Camino peatonal entre los edificios del condominio con áreas verdes' },
         { href: 'Ficha10.dc.html', titulo: 'Departamento 2D 2B y E, Condominio Puerta del Sur', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: '$ 400.000', dorm: '2', banos: '2', estac: '1', m2: '–', venta: false, arriendo: true, foto: 'img/a741ffc5d93828bb6643c4f8b030c10f.jpg', fotoAlt: 'Senderos y árboles en el condominio' },
         { href: 'Ficha11.dc.html', titulo: 'Departamento 3D 2B y E Amoblado, Condominio Puerta del Sur', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: '$ 680.000', dorm: '3', banos: '2', estac: '1', m2: '–', venta: false, arriendo: true, foto: 'img/12b058a4a0fd1fb33daba477c7feebda.jpg', fotoAlt: 'Living-comedor amoblado con ventanal a la terraza' },
-        { href: 'Ficha12.dc.html', foto: 'img/c0a3944b31b2841eb4b3230888d29d3c.jpg', fotoAlt: 'Fachada del Condominio Don Olegario', titulo: 'Departamento 2D 2B y E, Condominio Don Olegario', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: '$ 400.000', dorm: '2', banos: '2', estac: '1', m2: '–', venta: false, arriendo: false, arrendada: true },
+        { href: 'Ficha12.dc.html', foto: 'img/c0a3944b31b2841eb4b3230888d29d3c.jpg', fotoAlt: 'Fachada del Condominio Don Olegario', titulo: 'Departamento 2D 2B y E, Condominio Don Olegario', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: '$ 400.000', dorm: '2', banos: '2', estac: '1', m2: '–', venta: false, arriendo: false, arrendada: true, gris: 'filter:grayscale(1);' },
         { href: 'Ficha6.dc.html', titulo: 'Casa Condominio Parcelación Ecológica', ubicacion: 'Camino a Los Maquis, Pelequén, Región del Libertador Bernardo O’Higgins', precio: 'UF 11.200', dorm: '4', banos: '3', estac: 'Varios', m2: '215', venta: true, arriendo: false, foto: 'img/0942302e53bc84b497ddbb18dda2ced9.jpg', fotoAlt: 'Frente de la casa con vista a la cordillera' }
       ]
     };
