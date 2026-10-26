@@ -196,7 +196,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <span style="color:#54544F;font-size:14px">JR Propiedades</span>
 </div>
 </div>
-<form style="display:flex;flex-direction:column;gap:14px">
+<form onsubmit="return false" style="display:flex;flex-direction:column;gap:14px">
 <div style="display:flex;flex-direction:column;gap:6px">
 <label for="f-nombre" style="font-weight:700;font-size:14px">Nombre</label>
 <input id="f-nombre" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF">
@@ -213,8 +213,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <label for="f-msg" style="font-weight:700;font-size:14px">Mensaje</label>
 <textarea id="f-msg" rows="3" style="border:1px solid #85857F;border-radius:8px;padding:12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF;resize:vertical"></textarea>
 </div>
-<button type="button" style="height:48px;border:0;border-radius:8px;background:{{accent}};color:#373736;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Agendar visita</button>
-<button type="button" style="height:48px;border:2px solid #373736;border-radius:8px;background:#FFFFFF;color:#373736;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Escribir por WhatsApp</button>
+<p id="f-status" role="alert" aria-live="polite" style="margin:0;font-weight:700"></p>
+<button id="f-enviar" type="button" style="height:48px;border:0;border-radius:8px;background:{{accent}};color:#373736;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Agendar visita</button>
+<button id="f-wa" type="button" style="height:48px;border:2px solid #373736;border-radius:8px;background:#FFFFFF;color:#373736;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Escribir por WhatsApp</button>
 </form>
 </aside>
 
@@ -454,7 +455,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <span style="color:#54544F;font-size:14px">JR Propiedades</span>
 </div>
 </div>
-<form style="display:flex;flex-direction:column;gap:14px">
+<form onsubmit="return false" style="display:flex;flex-direction:column;gap:14px">
 <div style="display:flex;flex-direction:column;gap:6px">
 <label for="f-nombre" style="font-weight:700;font-size:14px">Nombre</label>
 <input id="f-nombre" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF">
@@ -471,8 +472,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <label for="f-msg" style="font-weight:700;font-size:14px">Mensaje</label>
 <textarea id="f-msg" rows="3" style="border:1px solid #85857F;border-radius:8px;padding:12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF;resize:vertical"></textarea>
 </div>
-<button type="button" style="height:48px;border:0;border-radius:8px;background:#C8963E;color:#373736;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Agendar visita</button>
-<button type="button" style="height:48px;border:2px solid #373736;border-radius:8px;background:#FFFFFF;color:#373736;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Escribir por WhatsApp</button>
+<p id="f-status" role="alert" aria-live="polite" style="margin:0;font-weight:700"></p>
+<button id="f-enviar" type="button" style="height:48px;border:0;border-radius:8px;background:#C8963E;color:#373736;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Agendar visita</button>
+<button id="f-wa" type="button" style="height:48px;border:2px solid #373736;border-radius:8px;background:#FFFFFF;color:#373736;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer">Escribir por WhatsApp</button>
 </form>
 </aside>
 
@@ -577,6 +579,40 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+<script>
+(function(){
+  var EMAIL='contacto@jr-propiedades.cl', WA='56990704040';
+  function $(id){return document.getElementById(id);}
+  function say(m,ok){var p=$('f-status'); if(!p)return; p.textContent=m; p.style.color= ok?'#1B6E3A':'#B3261E';}
+  function titulo(){var h=document.querySelector('h1'); return h?h.textContent.trim():document.title;}
+  document.addEventListener('click',function(e){
+    var t=e.target.closest&&e.target.closest('button'); if(!t)return;
+    if(t.id==='f-wa'){
+      var n=($('f-nombre')||{}).value||'';
+      var txt='Hola, me interesa esta propiedad: '+titulo()+' ('+location.href.split('#')[0]+').'+(n?' Mi nombre es '+n.trim()+'.':'');
+      window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(txt),'_blank','noopener');
+    }
+    if(t.id==='f-enviar'){
+      var nombre=($('f-nombre').value||'').trim(), correo=($('f-correo').value||'').trim(), tel=($('f-tel').value||'').trim(), msg=($('f-msg').value||'').trim();
+      if(!nombre){say('Por favor escribe tu nombre.');return;}
+      if(!correo&&!tel){say('Déjanos un correo o un teléfono para contactarte.');return;}
+      if(correo&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correo)){say('El correo no parece válido. Revísalo, por favor.');return;}
+      say('');t.disabled=true;t.textContent='Enviando…';
+      var body={Nombre:nombre,Correo:correo,Teléfono:tel,Mensaje:msg,Propiedad:titulo(),Página:location.href.split('#')[0],_subject:'Solicitud de visita: '+titulo(),_template:'table',_honey:''};
+      if(correo)body._replyto=correo;
+      fetch('https://formsubmit.co/ajax/'+EMAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)})
+        .then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d};});})
+        .then(function(x){
+          if(x.ok&&(x.d.success===true||x.d.success==='true')){
+            t.textContent='Enviado';say('¡Gracias! Recibimos tu solicitud y te contactaremos pronto.',true);
+            ['f-nombre','f-correo','f-tel','f-msg'].forEach(function(i){$(i).value='';});
+          } else throw new Error('envio');
+        })
+        .catch(function(){t.disabled=false;t.textContent='Agendar visita';say('No pudimos enviar tu solicitud. Escríbenos por WhatsApp o al correo '+EMAIL+'.');});
+    }
+  });
+})();
 </script>
 </body>
 </html>
