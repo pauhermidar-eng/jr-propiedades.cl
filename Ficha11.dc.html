@@ -4,6 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="dc-helmet" content="1">
+<style>
+[style*="flex:1 1"]{min-width:0}
+select,input,textarea{max-width:100%;box-sizing:border-box}
+@media (max-width:820px){
+  .hdr-in{flex-wrap:wrap !important;justify-content:space-between !important;align-items:center !important;gap:10px 12px !important;padding-top:12px !important;padding-bottom:12px !important}
+  .hdr-in > a:first-child{order:1}
+  .hdr-in img{height:54px !important}
+  .hdr-act{order:2;display:flex !important;flex-direction:column !important;flex-wrap:nowrap !important;gap:6px !important}
+  .hdr-act a{min-height:36px !important;padding:0 12px !important;font-size:13px !important;justify-content:center;white-space:nowrap}
+  .hdr-nav{order:3;flex-basis:100%;display:flex !important;flex-wrap:nowrap !important;justify-content:space-between !important;gap:0 8px !important;font-size:15px !important;padding-top:10px;border-top:1px solid rgba(128,128,128,.3)}
+  .hdr-nav a{white-space:nowrap}
+}
+</style>
 <link rel="icon" type="image/png" href="img/da6e98259b93e488ce781392c8cd0189.png">
 <meta name="description" content="JR Propiedades: venta, arriendo y administración de propiedades en San Fernando y la Región de O’Higgins.">
 
@@ -34,19 +47,19 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 <!-- Barra superior -->
 <header style="background:#FFFFFF;border-bottom:1px solid #E4E4E0">
-<div style="max-width:1200px;margin:0 auto;padding:16px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+<div class="hdr-in" style="max-width:1200px;margin:0 auto;padding:16px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
 <a href="index.html" style="display:flex;align-items:center;gap:12px">
 <img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:68px;width:auto;display:block">
 </a>
-<nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-weight:500">
-<a href="index.html">Propiedades</a>
-<a href="index.html">Servicios</a>
-<a href="index.html">Nosotros</a>
-<a href="index.html">Contacto</a>
+<nav class="hdr-nav" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-weight:500">
+<a href="index.html#propiedades">Propiedades</a>
+<a href="index.html#servicios">Servicios</a>
+<a href="index.html#nosotros">Nosotros</a>
+<a href="index.html#contacto">Contacto</a>
 </nav>
-<div style="display:flex;flex-wrap:wrap;gap:10px">
-<a href="index.html" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;border:2px solid #373736;font-weight:700">Vende tu propiedad</a>
-<a href="index.html" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;background:{{accent}};color:#373736;font-weight:700">Arrienda tu propiedad</a>
+<div class="hdr-act" style="display:flex;flex-wrap:wrap;gap:10px">
+<a href="index.html#vender" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;border:2px solid #373736;font-weight:700">Vende tu propiedad</a>
+<a href="index.html#vender" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;background:{{accent}};color:#373736;font-weight:700">Arrienda tu propiedad</a>
 </div>
 </div>
 </header>
@@ -256,19 +269,19 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 
 <header style="background:#FFFFFF;border-bottom:1px solid #E4E4E0">
-<div style="max-width:1200px;margin:0 auto;padding:16px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+<div class="hdr-in" style="max-width:1200px;margin:0 auto;padding:16px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
 <a href="index.html" style="display:flex;align-items:center;gap:12px">
 <img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:68px;width:auto;display:block">
 </a>
-<nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-weight:500">
-<a href="index.html">Propiedades</a>
-<a href="index.html">Servicios</a>
-<a href="index.html">Nosotros</a>
-<a href="index.html">Contacto</a>
+<nav class="hdr-nav" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-weight:500">
+<a href="index.html#propiedades">Propiedades</a>
+<a href="index.html#servicios">Servicios</a>
+<a href="index.html#nosotros">Nosotros</a>
+<a href="index.html#contacto">Contacto</a>
 </nav>
-<div style="display:flex;flex-wrap:wrap;gap:10px">
-<a href="index.html" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;border:2px solid #373736;font-weight:700">Vende tu propiedad</a>
-<a href="index.html" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;background:#C8963E;color:#373736;font-weight:700">Arrienda tu propiedad</a>
+<div class="hdr-act" style="display:flex;flex-wrap:wrap;gap:10px">
+<a href="index.html#vender" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;border:2px solid #373736;font-weight:700">Vende tu propiedad</a>
+<a href="index.html#vender" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:8px;background:#C8963E;color:#373736;font-weight:700">Arrienda tu propiedad</a>
 </div>
 </div>
 </header>
