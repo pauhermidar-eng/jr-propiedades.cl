@@ -74,11 +74,11 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 </nav>
 <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px">
 <div style="display:flex;flex-direction:column;gap:10px;flex:1 1 480px">
-<span style="align-self:flex-start;background:#373736;color:#FFFFFF;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">En arriendo</span>
+<span style="align-self:flex-start;background:#C8963E;color:#373736;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">Arrendada</span>
 <h1 style="margin: 0; font-family: 'Sora',sans-serif; font-weight: 700; font-size: clamp(28px,4vw,44px); line-height: 1.15; font-style: normal; position: relative">Departamento 2D 2B E B, Edificio Alto San Fernando</h1>
 <p style="margin:0;color:#54544F;font-size:18px">Cardenal José María Caro 720, San Fernando, Región del Libertador Bernardo O’Higgins</p>
 </div>
-<div style="display:flex;flex-direction:column;gap:2px"><span style="font-family: Sora, sans-serif; font-weight: 700; font-size: clamp(28px, 3.5vw, 38px); line-height: 1.1">$ 540.000</span><span style="color: rgb(84, 84, 79); font-size: 15px">Valor mensual de arriendo</span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-family: Sora, sans-serif; font-weight: 700; font-size: clamp(28px, 3.5vw, 38px); line-height: 1.1">$ 540.000</span><span style="color: rgb(84, 84, 79); font-size: 15px">Aprox. UF 13,11 al mes</span></div>
 </div>
 </div>
 </section>
@@ -93,7 +93,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <section style="background:#FFFFFF">
 <div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,32px) 0;display:flex;flex-direction:column;gap:12px">
 <div style="position:relative;height:clamp(280px,52vw,560px);border-radius:14px;overflow:hidden;background:#262625">
-<img src="{{current.src}}" alt="{{current.alt}}" style="width:100%;height:100%;object-fit:{{current.fit}};display:block">
+<img src="{{current.src}}" alt="{{current.alt}}" style="width:100%;height:100%;object-fit:{{current.fit}};display:block;filter:grayscale(1)">
 <button type="button" onClick="{{prev}}" aria-label="Foto anterior" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:999px;border:0;background:#FFFFFF;color:#373736;cursor:pointer;display:flex;align-items:center;justify-content:center">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
 </button>
@@ -105,7 +105,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:4px">
 <sc-for list="{{thumbs}}" as="t" hint-placeholder-count="15">
 <button type="button" onClick="{{t.pick}}" aria-label="{{t.alt}}" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:{{t.border}}">
-<img src="{{t.src}}" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="{{t.src}}" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 </sc-for>
 </div>
@@ -221,7 +221,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="display:flex;flex-wrap:wrap;gap:0 32px;border-top:1px solid #E4E4E0">
 <div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color:#54544F">Código</span><span style="font-weight:700">[JR-0000]</span></div>
 <div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color: rgb(84, 84, 79)">Tipo</span><span style="font-weight: 700">Departamento</span></div>
-<div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color:#54544F">Modalidad</span><span style="font-weight:700">Arriendo</span></div>
+<div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color:#54544F">Modalidad</span><span style="font-weight:700">Arrendada</span></div>
 <div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color:#54544F">Año de construcción</span><span style="font-weight:700">[0000]</span></div>
 <div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color: rgb(84, 84, 79)">Piso</span><span style="font-weight: 700">4</span></div>
 <div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color:#54544F">Orientación</span><span style="font-weight:700">Norte</span></div>
@@ -334,11 +334,11 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 </nav>
 <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px">
 <div style="display:flex;flex-direction:column;gap:10px;flex:1 1 480px">
-<span style="align-self:flex-start;background:#373736;color:#FFFFFF;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">En arriendo</span>
+<span style="align-self:flex-start;background:#C8963E;color:#373736;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">Arrendada</span>
 <h1 style="margin: 0; font-family: 'Sora',sans-serif; font-weight: 700; font-size: clamp(28px,4vw,44px); line-height: 1.15; font-style: normal; position: relative">Departamento 2D 2B E B, Edificio Alto San Fernando</h1>
 <p style="margin:0;color:#54544F;font-size:18px">Cardenal José María Caro 720, San Fernando, Región del Libertador Bernardo O’Higgins</p>
 </div>
-<div style="display:flex;flex-direction:column;gap:2px"><span style="font-family: Sora, sans-serif; font-weight: 700; font-size: clamp(28px, 3.5vw, 38px); line-height: 1.1">$ 540.000</span><span style="color: rgb(84, 84, 79); font-size: 15px">Valor mensual de arriendo</span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-family: Sora, sans-serif; font-weight: 700; font-size: clamp(28px, 3.5vw, 38px); line-height: 1.1">$ 540.000</span><span style="color: rgb(84, 84, 79); font-size: 15px">Aprox. UF 13,11 al mes</span></div>
 </div>
 </div>
 </section>
@@ -353,7 +353,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <section style="background:#FFFFFF">
 <div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,32px) 0;display:flex;flex-direction:column;gap:12px">
 <div style="position:relative;height:clamp(280px,52vw,560px);border-radius:14px;overflow:hidden;background:#262625">
-<img src="img/7be377991e54f53fa779035bdd86166b.jpg" alt="Living-comedor con piso flotante" style="width:100%;height:100%;object-fit:contain;display:block">
+<img src="img/7be377991e54f53fa779035bdd86166b.jpg" alt="Living-comedor con piso flotante" style="width:100%;height:100%;object-fit:contain;display:block;filter:grayscale(1)">
 <button type="button" aria-label="Foto anterior" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:999px;border:0;background:#FFFFFF;color:#373736;cursor:pointer;display:flex;align-items:center;justify-content:center">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
 </button>
@@ -365,83 +365,83 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:4px">
 
 <button type="button" aria-label="Ver foto 1: Living-comedor con piso flotante" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid #373736">
-<img src="img/7be377991e54f53fa779035bdd86166b.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/7be377991e54f53fa779035bdd86166b.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 2: Living-comedor y acceso al departamento" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/c4d7530e3526cc0a7e5dcf15130c9a09.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/c4d7530e3526cc0a7e5dcf15130c9a09.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 3: Cocina con encimera, horno y muebles de madera" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/85f4d16e153587a01dbab0a033089f52.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/85f4d16e153587a01dbab0a033089f52.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 4: Cocina con campana, encimera vitrocerámica y horno empotrado" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/482e1de444fa06fa0cb93ac4b0eb2ecd.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/482e1de444fa06fa0cb93ac4b0eb2ecd.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 5: Vista desde la terraza" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/0aba0d4cc4ce88683e9e99b1409607a8.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/0aba0d4cc4ce88683e9e99b1409607a8.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 6: Terraza con vista a la ciudad y la cordillera" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/5f8665e186c75666dae253b035d69956.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/5f8665e186c75666dae253b035d69956.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 7: Dormitorio con salida a la terraza" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/670f737d62ee89914f82f40b172cb4c2.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/670f737d62ee89914f82f40b172cb4c2.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 8: Dormitorio con piso flotante y radiador" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/5beb6ef414594d3c87848f49ae569539.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/5beb6ef414594d3c87848f49ae569539.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 9: Dormitorio luminoso con radiador" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/b17ce4d5dadc5771e42dd2957a4536e3.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/b17ce4d5dadc5771e42dd2957a4536e3.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 10: Dormitorio con closet empotrado y radiador" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/0a1fa390dc4060eca1c8f9acf26c511e.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/0a1fa390dc4060eca1c8f9acf26c511e.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 11: Dormitorio con ventana" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/bee318e5e6c8775075ddc2fd2e59ff0b.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/bee318e5e6c8775075ddc2fd2e59ff0b.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 12: Baño con vanitorio de mármol, espejo y toalla calefactora" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/a5ee7eafb9b33818ff867fa468aac561.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/a5ee7eafb9b33818ff867fa468aac561.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 13: Logia con lavadero" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/334a06cd0bb6eddfb388687dcf4e57aa.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/334a06cd0bb6eddfb388687dcf4e57aa.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 14: Fachada del edificio Alto San Fernando" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/33c6e4670c8c5400a425c6adbd9c5c66.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/33c6e4670c8c5400a425c6adbd9c5c66.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 15: Edificio Alto San Fernando visto desde la calle" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/d1797e3de486ae9adf6ab5ddf30dbc8e.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/d1797e3de486ae9adf6ab5ddf30dbc8e.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 16: Hall de acceso del edificio con sala de estar" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/dca2b44a187522b333387cf0ab95b4fd.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/dca2b44a187522b333387cf0ab95b4fd.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 17: Sala común con mesa y sillas" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/6b98dac515ac66f16f8239e62c4d1470.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/6b98dac515ac66f16f8239e62c4d1470.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 18: Gimnasio del edificio" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/da25298f0dd0e6ad80f759e63bd4e466.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/da25298f0dd0e6ad80f759e63bd4e466.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 19: Terraza común en la azotea con pérgola y vista a la cordillera" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/db7e8ea0d23cf82293c9ffdab1faf683.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/db7e8ea0d23cf82293c9ffdab1faf683.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 <button type="button" aria-label="Ver foto 20: Terraza común en la azotea con zona de estar" style="flex:none;width:112px;height:80px;padding:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#E4E4E0;border:3px solid transparent">
-<img src="img/54bd09822cd7146d8487e4bfb8190d22.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/54bd09822cd7146d8487e4bfb8190d22.jpg" alt="" style="filter:grayscale(1);width:100%;height:100%;object-fit:cover;display:block">
 </button>
 
 </div>
@@ -557,7 +557,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="display:flex;flex-wrap:wrap;gap:0 32px;border-top:1px solid #E4E4E0">
 <div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color:#54544F">Código</span><span style="font-weight:700">[JR-0000]</span></div>
 <div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color: rgb(84, 84, 79)">Tipo</span><span style="font-weight: 700">Departamento</span></div>
-<div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color:#54544F">Modalidad</span><span style="font-weight:700">Arriendo</span></div>
+<div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color:#54544F">Modalidad</span><span style="font-weight:700">Arrendada</span></div>
 <div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color:#54544F">Año de construcción</span><span style="font-weight:700">[0000]</span></div>
 <div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color: rgb(84, 84, 79)">Piso</span><span style="font-weight: 700">4</span></div>
 <div style="flex:1 1 280px;display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #E4E4E0"><span style="color:#54544F">Orientación</span><span style="font-weight:700">Norte</span></div>

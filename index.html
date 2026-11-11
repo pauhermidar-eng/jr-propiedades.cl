@@ -611,12 +611,12 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="height:220px;background:linear-gradient(135deg,#E3E3DF,#C8C8C2);display:flex;align-items:center;justify-content:center;color:#54544F;font-weight:500;position:relative">
 <span>Foto de la propiedad</span>
 
-<img src="img/7be377991e54f53fa779035bdd86166b.jpg" alt="Living-comedor con piso flotante" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+<img src="img/7be377991e54f53fa779035bdd86166b.jpg" alt="Living-comedor con piso flotante" style="filter:grayscale(1);position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
 
 
 
-<span style="position:absolute;top:14px;left:14px;background:#FFFFFF;color:#373736;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid #373736">Arriendo</span>
 
+<span style="position:absolute;top:14px;left:14px;background:#C8963E;color:#373736;font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">Arrendada</span>
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
@@ -1084,7 +1084,7 @@ class Component extends DCLogic {
         { href: 'Ficha3.dc.html', titulo: 'Departamento Tipo 2B, Edificio Alcázar', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: 'UF 6.800', dorm: '2', banos: '2', estac: '1', m2: '69', venta: true, arriendo: false, foto: 'img/31d5cd3c372f377096d7824dfe761f5a.jpg', fotoAlt: 'Living-comedor integrado a la cocina abierta' },
         { href: 'Ficha4.dc.html', titulo: 'Departamento Tipo 4, Edificio Alcázar', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: pr, dorm: '2', banos: '2', estac: '–', m2: '74', venta: true, arriendo: false, foto: 'img/2c74789afef4f0a596e51b6a6cf52b6b.jpg', fotoAlt: 'Living-comedor luminoso con vista a la cordillera' },
         { href: 'Ficha5.dc.html', titulo: 'Departamento Tipo 5, Edificio Alcázar', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: pr, dorm: '2', banos: '2', estac: '–', m2: '74', venta: true, arriendo: false, foto: 'img/b47ec5ed89c22143564ede9c16d249cd.jpg', fotoAlt: 'Living-comedor con ventanal a la terraza y vista a la cordillera' },
-        { href: 'Ficha7.dc.html', titulo: 'Departamento 2D 2B E B, Edificio Alto San Fernando', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: '$ 540.000', dorm: '2', banos: '2', estac: '1', m2: '60', venta: false, arriendo: true, foto: 'img/7be377991e54f53fa779035bdd86166b.jpg', fotoAlt: 'Living-comedor con piso flotante' },
+        { href: 'Ficha7.dc.html', titulo: 'Departamento 2D 2B E B, Edificio Alto San Fernando', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: '$ 540.000', dorm: '2', banos: '2', estac: '1', m2: '60', venta: false, arriendo: false, arrendada: true, gris: 'filter:grayscale(1);', foto: 'img/7be377991e54f53fa779035bdd86166b.jpg', fotoAlt: 'Living-comedor con piso flotante' },
         { href: 'Ficha8.dc.html', titulo: 'Departamento 2D 2B y E, Edificio Alto San Fernando', ubicacion: 'San Fernando, Región del Libertador Bernardo O\u2019Higgins', precio: 'UF 15', dorm: '2', banos: '2', estac: '1', m2: '–', venta: false, arriendo: true, foto: 'img/da9a09632ab6d00633ea47b61b38b899.jpg', fotoAlt: 'Living con ventanal y acceso a la terraza' },
         { href: 'Ficha9.dc.html', titulo: 'Departamento 3D 2B y E, Condominio Puerta del Sur', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: 'UF 2.671', dorm: '3', banos: '2', estac: '1', m2: '–', venta: true, arriendo: false, foto: 'img/c03f85d61bdd80a60054a8514f08e333.jpg', fotoAlt: 'Camino peatonal entre los edificios del condominio con áreas verdes' },
         { href: 'Ficha10.dc.html', titulo: 'Departamento 2D 2B y E, Condominio Puerta del Sur', ubicacion: 'San Fernando, Región del Libertador Bernardo O’Higgins', precio: '$ 400.000', dorm: '2', banos: '2', estac: '1', m2: '–', venta: false, arriendo: true, foto: 'img/a741ffc5d93828bb6643c4f8b030c10f.jpg', fotoAlt: 'Senderos y árboles en el condominio' },
