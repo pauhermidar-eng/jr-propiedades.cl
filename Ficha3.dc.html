@@ -87,6 +87,18 @@ html.menu-lock{overflow:hidden}
   window.__jrMenuIcon=ICON;
 })();
 </script>
+<style id="polish-css">
+article{box-shadow:0 1px 2px rgba(38,38,37,.05),0 10px 28px rgba(38,38,37,.07);transition:transform .25s ease,box-shadow .25s ease}
+article:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(38,38,37,.06),0 18px 40px rgba(38,38,37,.13)}
+a,button{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+.ft a:hover{color:#C8963E;text-decoration:none}
+@keyframes jr-rev{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@supports (animation-timeline:view()){
+@media (prefers-reduced-motion:no-preference){
+section[id]:not(#inicio) > div,#propiedades article,footer .ft-in{animation:jr-rev linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
+}}
+@media (prefers-reduced-motion:reduce){article{transition:none}}
+</style>
 </head>
 <body>
 <template id="dc-template"><x-dc>
@@ -335,18 +347,29 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 </section>
 
 <!-- Pie de página -->
-<footer style="background:#262625;color:#D2D2CD">
-<div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;font-size:14px">
-<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px">
-<img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:56px;width:auto;display:block;filter:brightness(0) invert(1)">
-<span>© JR Propiedades · 2026</span>
+<footer class="ft" style="background:#262625;color:#D2D2CD">
+<div class="ft-in" style="max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(16px,4vw,32px) 32px;display:flex;flex-wrap:wrap;gap:32px 48px;font-size:15px;line-height:1.6">
+<div style="flex:1.4 1 260px;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:84px;width:auto;display:block;filter:brightness(0) invert(1)">
+<p style="margin:0;max-width:320px;color:#B9B9B3">Gestión inmobiliaria personalizada en San Fernando y la Región de O’Higgins.</p>
 </div>
-<nav style="display:flex;flex-wrap:wrap;gap:8px 24px">
-<a href="index.html">Propiedades</a>
-<a href="index.html">Servicios</a>
-<a href="index.html">Nosotros</a>
-<a href="index.html">Contacto</a>
-</nav>
+<div style="flex:1 1 150px;display:flex;flex-direction:column;gap:8px">
+<span style="font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#C8963E">Navegación</span>
+<a href="index.html#propiedades">Propiedades</a>
+<a href="index.html#servicios">Servicios</a>
+<a href="index.html#nosotros">Nosotros</a>
+<a href="index.html#contacto">Contacto</a>
+</div>
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:8px">
+<span style="font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#C8963E">Contacto</span>
+<a href="tel:+56990704040">+56 9 9070 4040</a>
+<a href="mailto:contacto@jr-propiedades.cl">contacto@jr-propiedades.cl</a>
+<a href="https://www.instagram.com/jessicareyespropiedades" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.facebook.com/profile.php?id=61595925120325" target="_blank" rel="noopener">Facebook</a>
+</div>
+</div>
+<div style="border-top:1px solid rgba(255,255,255,.12)">
+<div style="max-width:1200px;margin:0 auto;padding:18px clamp(16px,4vw,32px);font-size:13px;color:#9A9A94">© JR Propiedades · 2026. Todos los derechos reservados.</div>
 </div>
 </footer>
 
@@ -702,18 +725,29 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 </section>
 
 
-<footer style="background:#262625;color:#D2D2CD">
-<div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;font-size:14px">
-<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px">
-<img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:56px;width:auto;display:block;filter:brightness(0) invert(1)">
-<span>© JR Propiedades · 2026</span>
+<footer class="ft" style="background:#262625;color:#D2D2CD">
+<div class="ft-in" style="max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(16px,4vw,32px) 32px;display:flex;flex-wrap:wrap;gap:32px 48px;font-size:15px;line-height:1.6">
+<div style="flex:1.4 1 260px;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:84px;width:auto;display:block;filter:brightness(0) invert(1)">
+<p style="margin:0;max-width:320px;color:#B9B9B3">Gestión inmobiliaria personalizada en San Fernando y la Región de O’Higgins.</p>
 </div>
-<nav style="display:flex;flex-wrap:wrap;gap:8px 24px">
-<a href="index.html">Propiedades</a>
-<a href="index.html">Servicios</a>
-<a href="index.html">Nosotros</a>
-<a href="index.html">Contacto</a>
-</nav>
+<div style="flex:1 1 150px;display:flex;flex-direction:column;gap:8px">
+<span style="font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#C8963E">Navegación</span>
+<a href="index.html#propiedades">Propiedades</a>
+<a href="index.html#servicios">Servicios</a>
+<a href="index.html#nosotros">Nosotros</a>
+<a href="index.html#contacto">Contacto</a>
+</div>
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:8px">
+<span style="font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#C8963E">Contacto</span>
+<a href="tel:+56990704040">+56 9 9070 4040</a>
+<a href="mailto:contacto@jr-propiedades.cl">contacto@jr-propiedades.cl</a>
+<a href="https://www.instagram.com/jessicareyespropiedades" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.facebook.com/profile.php?id=61595925120325" target="_blank" rel="noopener">Facebook</a>
+</div>
+</div>
+<div style="border-top:1px solid rgba(255,255,255,.12)">
+<div style="max-width:1200px;margin:0 auto;padding:18px clamp(16px,4vw,32px);font-size:13px;color:#9A9A94">© JR Propiedades · 2026. Todos los derechos reservados.</div>
 </div>
 </footer>
 
