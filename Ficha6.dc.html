@@ -33,13 +33,14 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <script src="support.js" defer></script>
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "050518d29adc44e28bbb1e8b16e0c57f"}'></script><!-- End Cloudflare Web Analytics --><style id="hdr-burger-css">
 header{position:sticky;top:0;z-index:1000}
-[id]{scroll-margin-top:120px}
+[id]{scroll-margin-top:100px}
 @media (max-width:820px){[id]{scroll-margin-top:92px}}
 .hdr-nav,.hdr-act{display:none !important}
 .hdr-in > a:first-child{order:1 !important}
 .hdr-burger{order:2 !important}
 .hdr-in{flex-wrap:nowrap !important;justify-content:space-between !important;align-items:center !important;gap:12px !important}
-.hdr-in img{height:84px !important}
+.hdr-in img{height:60px !important}
+@media (min-width:821px){.hdr-in img{height:52px !important;width:auto}}
 .hdr-burger{display:inline-flex !important;align-items:center;gap:10px;height:46px;padding:0 18px;border:2px solid currentColor;border-radius:999px;background:transparent;color:inherit;cursor:pointer;font:700 15px 'DM Sans',system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase}
 .hdr-burger:hover{background:rgba(128,128,128,.18)}
 @media (max-width:820px){.hdr-in img{height:60px !important}.hdr-burger{padding:0 14px;height:42px}}
@@ -105,7 +106,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <header style="background:#FFFFFF;border-bottom:1px solid #E4E4E0">
 <div class="hdr-in" style="max-width:1200px;margin:0 auto;padding:16px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
 <a href="index.html" style="display:flex;align-items:center;gap:12px">
-<img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:68px;width:auto;display:block">
+<picture><source media="(min-width:821px)" srcset="img/logo-horizontal.svg"><img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:68px;width:auto;display:block"></picture>
 </a>
 <button type="button" class="hdr-burger" aria-label="Abrir menú"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 7h18M3 12h18M3 17h18"/></svg><span>Menú</span></button>
 <nav class="hdr-nav" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-weight:500">
@@ -359,7 +360,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <header style="background:#FFFFFF;border-bottom:1px solid #E4E4E0">
 <div class="hdr-in" style="max-width:1200px;margin:0 auto;padding:16px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
 <a href="index.html" style="display:flex;align-items:center;gap:12px">
-<img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:68px;width:auto;display:block">
+<picture><source media="(min-width:821px)" srcset="img/logo-horizontal.svg"><img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:68px;width:auto;display:block"></picture>
 </a>
 <button type="button" class="hdr-burger" aria-label="Abrir menú"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 7h18M3 12h18M3 17h18"/></svg><span>Menú</span></button>
 <nav class="hdr-nav" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-weight:500">
