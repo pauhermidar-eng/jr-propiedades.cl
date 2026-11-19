@@ -128,6 +128,38 @@ window.addEventListener('scroll',u,{passive:true});window.addEventListener('load
 document.addEventListener('click',function(e){var c=e.target.closest&&e.target.closest('.flip');if(!c)return;if(e.target.closest('.flip-b a'))return;if(window.matchMedia&&window.matchMedia('(hover:hover)').matches)return;var on=c.classList.toggle('on');c.setAttribute('aria-pressed',on?'true':'false');});
 document.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('flip')){e.preventDefault();var on=e.target.classList.toggle('on');e.target.setAttribute('aria-pressed',on?'true':'false');}});
 </script>
+<style id="vt-css">
+.vt{position:relative}
+.vt-i{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.vt-tabs{display:inline-flex;gap:4px;padding:5px;border-radius:999px;background:#E4E4E0;margin-bottom:24px;max-width:100%}
+.vt-tabs label{cursor:pointer;padding:12px 24px;border-radius:999px;font-weight:700;font-size:15px;color:#54544F;transition:background .25s ease,color .25s ease;white-space:nowrap}
+.vt-tabs label:hover{color:#373736}
+#vt-v:checked ~ .vt-tabs label[for="vt-v"],#vt-a:checked ~ .vt-tabs label[for="vt-a"]{background:#373736;color:#FFFFFF}
+#vt-v:focus-visible ~ .vt-tabs label[for="vt-v"],#vt-a:focus-visible ~ .vt-tabs label[for="vt-a"]{outline:3px solid #C8963E;outline-offset:2px}
+.vt-p{display:none;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;animation:vt-in .5s ease both}
+#vt-v:checked ~ .vt-pv,#vt-a:checked ~ .vt-pa{display:grid}
+@keyframes vt-in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.vt-c{border-radius:16px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.vt-dark{background:#373736;color:#FFFFFF}
+.vt-light{background:#F5F5F3;border:1px solid #E4E4E0;color:#373736}
+.vt-c h2{margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.2}
+.vt-c p{margin:0}
+.vt-dark p{color:#E2E2DE}.vt-light p{color:#54544F}
+.vt-cta{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:8px;font-weight:700;transition:transform .2s ease}
+.vt-cta:hover{transform:translateX(4px);text-decoration:none}
+.vt-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px;position:relative}
+.vt-steps::before{content:"";position:absolute;left:19px;top:20px;bottom:20px;width:2px;background:rgba(200,150,62,.45)}
+.vt-step{display:flex;gap:16px;align-items:flex-start;position:relative;animation:vt-in .55s ease both}
+.vt-p .vt-step:nth-child(1){animation-delay:.15s}.vt-p .vt-step:nth-child(2){animation-delay:.3s}.vt-p .vt-step:nth-child(3){animation-delay:.45s}
+.vt-n{flex:none;width:40px;height:40px;border-radius:50%;background:#C8963E;color:#373736;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:700;position:relative;z-index:1}
+.vt-step b{display:block;font-family:'Sora',sans-serif;font-size:18px;margin-bottom:2px}
+.vt-step span{font-size:15px}
+.vt-dark .vt-step span{color:#D2D2CD}.vt-light .vt-step span{color:#54544F}
+@media (prefers-reduced-motion:reduce){.vt-p,.vt-step{animation:none}}
+</style>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#vender"]');if(!a)return;var t=(a.textContent||'').toLowerCase();var id=t.indexOf('arrienda')>-1?'vt-a':(t.indexOf('vende')>-1?'vt-v':null);if(!id)return;var r=document.getElementById(id);if(r)r.checked=true;});
+</script>
 </head>
 <body>
 <template id="dc-template"><x-dc>
@@ -297,16 +329,18 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 <!-- Vender / arrendar -->
 <section id="vender" style="background:#FFFFFF">
-<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 440px;background:#373736;color:#FFFFFF;border-radius:16px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px;align-items:flex-start">
-<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.2">¿Quieres vender tu propiedad?</h2>
-<p style="margin:0;color:#E2E2DE">Nos especializamos en seleccionar meticulosamente las propiedades con las que trabajamos, garantizando a nuestros clientes una alta probabilidad de éxito en la venta de sus inmuebles. Nuestro enfoque está en la calidad, no en la cantidad. Dedicamos tiempo y recursos a crear estrategias de venta personalizadas que nos permiten conectar propiedades excepcionales con compradores que buscan un lugar especial para vivir.</p>
-<a href="#contacto" style="display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:{{accent}};color:#373736;font-weight:700">Quiero vender</a>
+<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px)">
+<div class="vt">
+<input class="vt-i" type="radio" name="vt" id="vt-v" checked aria-label="Quiero vender"><input class="vt-i" type="radio" name="vt" id="vt-a" aria-label="Quiero arrendar">
+<div class="vt-tabs"><label for="vt-v">Quiero vender</label><label for="vt-a">Quiero arrendar</label></div>
+<div class="vt-p vt-pv">
+<div class="vt-c vt-dark"><h2>¿Quieres vender tu propiedad?</h2><p>Nos especializamos en seleccionar meticulosamente las propiedades con las que trabajamos, garantizando a nuestros clientes una alta probabilidad de éxito en la venta de sus inmuebles. Nuestro enfoque está en la calidad, no en la cantidad. Dedicamos tiempo y recursos a crear estrategias de venta personalizadas que nos permiten conectar propiedades excepcionales con compradores que buscan un lugar especial para vivir.</p><a class="vt-cta" href="#contacto" style="background:{{accent}};color:#373736">Quiero vender <span aria-hidden="true">→</span></a></div>
+<div class="vt-c vt-light" style="justify-content:center"><ol class="vt-steps"><li class="vt-step"><i class="vt-n" style="font-style:normal">1</i><div><b>Valor real de tu propiedad</b><span>Evaluamos tu inmueble y calculamos cuánto vale de verdad.</span></div></li><li class="vt-step"><i class="vt-n" style="font-style:normal">2</i><div><b>Estrategia a tu medida</b><span>Diseñamos la venta y buscamos al comprador correcto.</span></div></li><li class="vt-step"><i class="vt-n" style="font-style:normal">3</i><div><b>Hasta la firma</b><span>Preparamos la papelería y te acompañamos hasta cerrar la venta.</span></div></li></ol></div>
 </div>
-<div style="flex:1 1 440px;background:#F5F5F3;border:1px solid #E4E4E0;border-radius:16px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px;align-items:flex-start">
-<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.2">¿Quieres arrendar tu propiedad?</h2>
-<p style="margin:0;color:#54544F">Poner tu propiedad en arriendo no tiene por qué ser una preocupación. Nosotros buscamos y evaluamos con cuidado a cada postulante, para que tu inmueble quede en manos responsables, y nos encargamos de los contratos y del seguimiento. Así tú recibes tu renta con tranquilidad, mientras tu propiedad se mantiene bien cuidada.</p>
-<a href="#contacto" style="display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:#373736;color:#FFFFFF;font-weight:700">Quiero arrendar</a>
+<div class="vt-p vt-pa">
+<div class="vt-c vt-light"><h2>¿Quieres arrendar tu propiedad?</h2><p>Poner tu propiedad en arriendo no tiene por qué ser una preocupación. Nosotros buscamos y evaluamos con cuidado a cada postulante, para que tu inmueble quede en manos responsables, y nos encargamos de los contratos y del seguimiento. Así tú recibes tu renta con tranquilidad, mientras tu propiedad se mantiene bien cuidada.</p><a class="vt-cta" href="#contacto" style="background:#373736;color:#FFFFFF">Quiero arrendar <span aria-hidden="true">→</span></a></div>
+<div class="vt-c vt-dark" style="justify-content:center"><ol class="vt-steps"><li class="vt-step"><i class="vt-n" style="font-style:normal">1</i><div><b>Buscamos al arrendatario</b><span>Buscamos a la persona indicada para tu propiedad.</span></div></li><li class="vt-step"><i class="vt-n" style="font-style:normal">2</i><div><b>Evaluamos a cada postulante</b><span>Revisamos con cuidado para dejar tu inmueble en manos responsables.</span></div></li><li class="vt-step"><i class="vt-n" style="font-style:normal">3</i><div><b>Contrato y seguimiento</b><span>Nos encargamos de los contratos y del seguimiento, para que recibas tu renta con tranquilidad.</span></div></li></ol></div>
+</div>
 </div>
 </div>
 </section>
@@ -1028,16 +1062,18 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 </section>
 
 <section id="vender" style="background:#FFFFFF">
-<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 440px;background:#373736;color:#FFFFFF;border-radius:16px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px;align-items:flex-start">
-<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.2">¿Quieres vender tu propiedad?</h2>
-<p style="margin:0;color:#E2E2DE">Nos especializamos en seleccionar meticulosamente las propiedades con las que trabajamos, garantizando a nuestros clientes una alta probabilidad de éxito en la venta de sus inmuebles. Nuestro enfoque está en la calidad, no en la cantidad. Dedicamos tiempo y recursos a crear estrategias de venta personalizadas que nos permiten conectar propiedades excepcionales con compradores que buscan un lugar especial para vivir.</p>
-<a href="#contacto" style="display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:#C8963E;color:#373736;font-weight:700">Quiero vender</a>
+<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px)">
+<div class="vt">
+<input class="vt-i" type="radio" name="vt" id="vt-v" checked aria-label="Quiero vender"><input class="vt-i" type="radio" name="vt" id="vt-a" aria-label="Quiero arrendar">
+<div class="vt-tabs"><label for="vt-v">Quiero vender</label><label for="vt-a">Quiero arrendar</label></div>
+<div class="vt-p vt-pv">
+<div class="vt-c vt-dark"><h2>¿Quieres vender tu propiedad?</h2><p>Nos especializamos en seleccionar meticulosamente las propiedades con las que trabajamos, garantizando a nuestros clientes una alta probabilidad de éxito en la venta de sus inmuebles. Nuestro enfoque está en la calidad, no en la cantidad. Dedicamos tiempo y recursos a crear estrategias de venta personalizadas que nos permiten conectar propiedades excepcionales con compradores que buscan un lugar especial para vivir.</p><a class="vt-cta" href="#contacto" style="background:#C8963E;color:#373736">Quiero vender <span aria-hidden="true">→</span></a></div>
+<div class="vt-c vt-light" style="justify-content:center"><ol class="vt-steps"><li class="vt-step"><i class="vt-n" style="font-style:normal">1</i><div><b>Valor real de tu propiedad</b><span>Evaluamos tu inmueble y calculamos cuánto vale de verdad.</span></div></li><li class="vt-step"><i class="vt-n" style="font-style:normal">2</i><div><b>Estrategia a tu medida</b><span>Diseñamos la venta y buscamos al comprador correcto.</span></div></li><li class="vt-step"><i class="vt-n" style="font-style:normal">3</i><div><b>Hasta la firma</b><span>Preparamos la papelería y te acompañamos hasta cerrar la venta.</span></div></li></ol></div>
 </div>
-<div style="flex:1 1 440px;background:#F5F5F3;border:1px solid #E4E4E0;border-radius:16px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px;align-items:flex-start">
-<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.2">¿Quieres arrendar tu propiedad?</h2>
-<p style="margin:0;color:#54544F">Poner tu propiedad en arriendo no tiene por qué ser una preocupación. Nosotros buscamos y evaluamos con cuidado a cada postulante, para que tu inmueble quede en manos responsables, y nos encargamos de los contratos y del seguimiento. Así tú recibes tu renta con tranquilidad, mientras tu propiedad se mantiene bien cuidada.</p>
-<a href="#contacto" style="display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;background:#373736;color:#FFFFFF;font-weight:700">Quiero arrendar</a>
+<div class="vt-p vt-pa">
+<div class="vt-c vt-light"><h2>¿Quieres arrendar tu propiedad?</h2><p>Poner tu propiedad en arriendo no tiene por qué ser una preocupación. Nosotros buscamos y evaluamos con cuidado a cada postulante, para que tu inmueble quede en manos responsables, y nos encargamos de los contratos y del seguimiento. Así tú recibes tu renta con tranquilidad, mientras tu propiedad se mantiene bien cuidada.</p><a class="vt-cta" href="#contacto" style="background:#373736;color:#FFFFFF">Quiero arrendar <span aria-hidden="true">→</span></a></div>
+<div class="vt-c vt-dark" style="justify-content:center"><ol class="vt-steps"><li class="vt-step"><i class="vt-n" style="font-style:normal">1</i><div><b>Buscamos al arrendatario</b><span>Buscamos a la persona indicada para tu propiedad.</span></div></li><li class="vt-step"><i class="vt-n" style="font-style:normal">2</i><div><b>Evaluamos a cada postulante</b><span>Revisamos con cuidado para dejar tu inmueble en manos responsables.</span></div></li><li class="vt-step"><i class="vt-n" style="font-style:normal">3</i><div><b>Contrato y seguimiento</b><span>Nos encargamos de los contratos y del seguimiento, para que recibas tu renta con tranquilidad.</span></div></li></ol></div>
+</div>
 </div>
 </div>
 </section>
