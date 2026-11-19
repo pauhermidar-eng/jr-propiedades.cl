@@ -99,6 +99,18 @@ section[id]:not(#inicio) > div,#propiedades article,footer .ft-in{animation:jr-r
 }}
 @media (prefers-reduced-motion:reduce){article{transition:none}}
 </style>
+<style id="hero-over-css">
+header.hdr-over{position:fixed !important;top:0;left:0;right:0;width:100%;background:linear-gradient(180deg,rgba(38,38,37,.72) 0%,rgba(38,38,37,0) 100%);transition:background .3s ease,box-shadow .3s ease;-webkit-backdrop-filter:none}
+header.hdr-over.scrolled{background:rgba(38,38,37,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 2px 18px rgba(0,0,0,.25)}
+header.hdr-over .hdr-in{padding-top:12px !important;padding-bottom:12px !important}
+#inicio{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center}
+#inicio > div{padding-top:150px !important;width:100%;box-sizing:border-box}
+@media (max-width:820px){#inicio > div{padding-top:120px !important}}
+</style>
+<script>
+(function(){function u(){var h=document.querySelector('header.hdr-over');if(h)h.classList.toggle('scrolled',(window.scrollY||document.documentElement.scrollTop)>40);}
+window.addEventListener('scroll',u,{passive:true});window.addEventListener('load',u);document.addEventListener('DOMContentLoaded',u);setTimeout(u,500);setTimeout(u,1500);})();
+</script>
 </head>
 <body>
 <template id="dc-template"><x-dc>
@@ -114,7 +126,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="width:100%;background:#FFFFFF;color:#373736;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.5">
 
 <!-- Barra superior -->
-<header style="background:linear-gradient(135deg,#373736 0%,#4A4A48 100%);color:#FFFFFF">
+<header class="hdr-over" style="color:#FFFFFF">
 <div class="hdr-in" style="max-width:1200px;margin:0 auto;padding:16px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
 <a href="#inicio" style="display:flex;align-items:center;gap:12px">
 <img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:112px;width:auto;display:block;filter:brightness(0) invert(1)">
@@ -442,7 +454,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="width:100%;background:#FFFFFF;color:#373736;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.5">
 
 
-<header style="background:linear-gradient(135deg,#373736 0%,#4A4A48 100%);color:#FFFFFF">
+<header class="hdr-over" style="color:#FFFFFF">
 <div class="hdr-in" style="max-width:1200px;margin:0 auto;padding:16px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
 <a href="#inicio" style="display:flex;align-items:center;gap:12px">
 <img src="img/da6e98259b93e488ce781392c8cd0189.png" alt="JR Propiedades, gestión inmobiliaria" style="height:112px;width:auto;display:block;filter:brightness(0) invert(1)">
