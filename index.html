@@ -160,6 +160,18 @@ document.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' '
 <script>
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#vender"]');if(!a)return;var t=(a.textContent||'').toLowerCase();var id=t.indexOf('arrienda')>-1?'vt-a':(t.indexOf('vende')>-1?'vt-v':null);if(!id)return;var r=document.getElementById(id);if(r)r.checked=true;});
 </script>
+<style id="at-css">
+.at-grid{display:flex;flex-wrap:wrap;gap:20px}
+.at-c{box-sizing:border-box;flex:1 1 240px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px;transition:transform .3s ease,border-color .3s ease,background .3s ease}
+.at-c:hover{transform:translateY(-6px);border-color:#C8963E;background:rgba(255,255,255,.08)}
+.at-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.at-n{font-family:'Sora',sans-serif;font-weight:700;font-size:48px;line-height:1;color:transparent;-webkit-text-stroke:1.5px #C8963E}
+.at-ic{width:46px;height:46px;border-radius:12px;background:#C8963E;display:flex;align-items:center;justify-content:center;flex:none;transition:transform .3s ease}
+.at-c:hover .at-ic{transform:rotate(-8deg) scale(1.08)}
+.at-c h3{margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:20px;color:#FFFFFF}
+.at-c p{margin:0;color:#D2D2CD;font-size:15px}
+.at-btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;font-weight:700}
+</style>
 </head>
 <body>
 <template id="dc-template"><x-dc>
@@ -307,26 +319,6 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 </div>
 </section>
 
-<!-- Así trabajamos -->
-<section id="asi-trabajamos" style="background:#FFFFFF">
-<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px) 0;display:flex;flex-direction:column;gap:32px">
-<div style="display:flex;flex-direction:column;gap:8px;max-width:640px">
-<span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#54544F">Cómo trabajamos</span>
-<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Así trabajamos</h2>
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:20px">
-<div style="flex:1 1 240px;border-top:3px solid {{accent}};padding-top:16px;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:20px">Atención directa</h3><p style="margin:0;color:#54544F">Hablas siempre con la misma persona, de principio a fin.</p></div>
-<div style="flex:1 1 240px;border-top:3px solid {{accent}};padding-top:16px;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:20px">Propiedades seleccionadas</h3><p style="margin:0;color:#54544F">Trabajamos con pocas propiedades para dedicarle tiempo a cada una.</p></div>
-<div style="flex:1 1 240px;border-top:3px solid {{accent}};padding-top:16px;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:20px">Plan a tu medida</h3><p style="margin:0;color:#54544F">Definimos una estrategia de venta o arriendo para tu caso.</p></div>
-<div style="flex:1 1 240px;border-top:3px solid {{accent}};padding-top:16px;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:20px">Acompañamiento completo</h3><p style="margin:0;color:#54544F">Nos encargamos de postulantes, contratos y seguimiento.</p></div>
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:12px">
-<a href="https://wa.me/56990704040" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;background:{{accent}};color:#373736;font-weight:700">Escríbenos por WhatsApp</a>
-<a href="#contacto" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;background:#373736;color:#FFFFFF;font-weight:700">Agendar una visita</a>
-</div>
-</div>
-</section>
-
 <!-- Vender / arrendar -->
 <section id="vender" style="background:#FFFFFF">
 <div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px)">
@@ -407,6 +399,26 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 
 <!-- Pie de página -->
+<!-- Así trabajamos -->
+<section id="asi-trabajamos" style="background:#373736;color:#FFFFFF">
+<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px);display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:8px;max-width:640px">
+<span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:{{accent}}">Cómo trabajamos</span>
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Así trabajamos</h2>
+</div>
+<div class="at-grid">
+<div class="at-c"><div class="at-top"><span class="at-n">01</span><span class="at-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"></path></svg></span></div><h3>Atención directa</h3><p>Hablas siempre con la misma persona, de principio a fin.</p></div>
+<div class="at-c"><div class="at-top"><span class="at-n">02</span><span class="at-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"></path></svg></span></div><h3>Propiedades seleccionadas</h3><p>Trabajamos con pocas propiedades para dedicarle tiempo a cada una.</p></div>
+<div class="at-c"><div class="at-top"><span class="at-n">03</span><span class="at-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg></span></div><h3>Plan a tu medida</h3><p>Definimos una estrategia de venta o arriendo para tu caso.</p></div>
+<div class="at-c"><div class="at-top"><span class="at-n">04</span><span class="at-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"></path><path d="M5 4h11l-2 4 2 4H5"></path></svg></span></div><h3>Acompañamiento completo</h3><p>Nos encargamos de postulantes, contratos y seguimiento.</p></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<a class="at-btn" href="https://wa.me/56990704040" target="_blank" rel="noopener" style="background:{{accent}};color:#373736">Escríbenos por WhatsApp</a>
+<a class="at-btn" href="#contacto" style="border:2px solid #FFFFFF;color:#FFFFFF">Agendar una visita</a>
+</div>
+</div>
+</section>
+
 <section id="nosotros" style="background:#FFFFFF">
 <div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px,7vw,88px) clamp(16px,4vw,32px); display: flex; flex-wrap: wrap; gap: 40px; align-items: center; position: relative">
 <div style="flex:1 1 420px;display:flex;flex-direction:column;gap:16px">
@@ -1041,26 +1053,6 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 </section>
 
 
-<!-- Así trabajamos -->
-<section id="asi-trabajamos" style="background:#FFFFFF">
-<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px) 0;display:flex;flex-direction:column;gap:32px">
-<div style="display:flex;flex-direction:column;gap:8px;max-width:640px">
-<span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#54544F">Cómo trabajamos</span>
-<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Así trabajamos</h2>
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:20px">
-<div style="flex:1 1 240px;border-top:3px solid #C8963E;padding-top:16px;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:20px">Atención directa</h3><p style="margin:0;color:#54544F">Hablas siempre con la misma persona, de principio a fin.</p></div>
-<div style="flex:1 1 240px;border-top:3px solid #C8963E;padding-top:16px;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:20px">Propiedades seleccionadas</h3><p style="margin:0;color:#54544F">Trabajamos con pocas propiedades para dedicarle tiempo a cada una.</p></div>
-<div style="flex:1 1 240px;border-top:3px solid #C8963E;padding-top:16px;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:20px">Plan a tu medida</h3><p style="margin:0;color:#54544F">Definimos una estrategia de venta o arriendo para tu caso.</p></div>
-<div style="flex:1 1 240px;border-top:3px solid #C8963E;padding-top:16px;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:20px">Acompañamiento completo</h3><p style="margin:0;color:#54544F">Nos encargamos de postulantes, contratos y seguimiento.</p></div>
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:12px">
-<a href="https://wa.me/56990704040" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;background:#C8963E;color:#373736;font-weight:700">Escríbenos por WhatsApp</a>
-<a href="#contacto" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;background:#373736;color:#FFFFFF;font-weight:700">Agendar una visita</a>
-</div>
-</div>
-</section>
-
 <section id="vender" style="background:#FFFFFF">
 <div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px)">
 <div class="vt">
@@ -1139,6 +1131,26 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 
 
+
+<!-- Así trabajamos -->
+<section id="asi-trabajamos" style="background:#373736;color:#FFFFFF">
+<div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px);display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:8px;max-width:640px">
+<span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#C8963E">Cómo trabajamos</span>
+<h2 style="margin:0;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Así trabajamos</h2>
+</div>
+<div class="at-grid">
+<div class="at-c"><div class="at-top"><span class="at-n">01</span><span class="at-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"></path></svg></span></div><h3>Atención directa</h3><p>Hablas siempre con la misma persona, de principio a fin.</p></div>
+<div class="at-c"><div class="at-top"><span class="at-n">02</span><span class="at-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"></path></svg></span></div><h3>Propiedades seleccionadas</h3><p>Trabajamos con pocas propiedades para dedicarle tiempo a cada una.</p></div>
+<div class="at-c"><div class="at-top"><span class="at-n">03</span><span class="at-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg></span></div><h3>Plan a tu medida</h3><p>Definimos una estrategia de venta o arriendo para tu caso.</p></div>
+<div class="at-c"><div class="at-top"><span class="at-n">04</span><span class="at-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"></path><path d="M5 4h11l-2 4 2 4H5"></path></svg></span></div><h3>Acompañamiento completo</h3><p>Nos encargamos de postulantes, contratos y seguimiento.</p></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<a class="at-btn" href="https://wa.me/56990704040" target="_blank" rel="noopener" style="background:#C8963E;color:#373736">Escríbenos por WhatsApp</a>
+<a class="at-btn" href="#contacto" style="border:2px solid #FFFFFF;color:#FFFFFF">Agendar una visita</a>
+</div>
+</div>
+</section>
 
 <section id="nosotros" style="background:#FFFFFF">
 <div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px,7vw,88px) clamp(16px,4vw,32px); display: flex; flex-wrap: wrap; gap: 40px; align-items: center; position: relative">
