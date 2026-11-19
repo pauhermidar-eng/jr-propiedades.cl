@@ -111,6 +111,23 @@ header.hdr-over .hdr-in{padding-top:12px !important;padding-bottom:12px !importa
 (function(){function u(){var h=document.querySelector('header.hdr-over');if(h)h.classList.toggle('scrolled',(window.scrollY||document.documentElement.scrollTop)>40);}
 window.addEventListener('scroll',u,{passive:true});window.addEventListener('load',u);document.addEventListener('DOMContentLoaded',u);setTimeout(u,500);setTimeout(u,1500);})();
 </script>
+<style id="flip-css">
+.flip{flex:1 1 calc((100% - 48px)/3);min-width:260px;min-height:340px;perspective:1100px;cursor:pointer;border-radius:14px;outline-offset:3px}
+.flip-in{position:relative;width:100%;height:100%;min-height:340px;transition:transform .7s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d}
+.flip-f,.flip-b{position:absolute;inset:0;border-radius:14px;padding:24px;box-sizing:border-box;display:flex;flex-direction:column;gap:10px;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.flip-f{background:#E4E4E0;border:1px solid #E4E4E0}
+.flip-b{background:#373736;color:#FFFFFF;transform:rotateY(180deg);justify-content:flex-start}
+.flip-b ul{margin:0;padding:0 0 0 18px;display:flex;flex-direction:column;gap:5px;font-size:15px;color:#E2E2DE;flex:1}
+.flip-b a{align-self:flex-start;display:inline-flex;align-items:center;min-height:42px;padding:0 20px;border-radius:8px;color:#373736;font-weight:700}
+.flip-hint{margin-top:auto;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#54544F}
+@media (hover:hover){.flip:hover .flip-in{transform:rotateY(180deg)}}
+.flip:focus-visible .flip-in,.flip.on .flip-in{transform:rotateY(180deg)}
+@media (prefers-reduced-motion:reduce){.flip-in{transition:none}}
+</style>
+<script>
+document.addEventListener('click',function(e){var c=e.target.closest&&e.target.closest('.flip');if(!c)return;if(e.target.closest('.flip-b a'))return;if(window.matchMedia&&window.matchMedia('(hover:hover)').matches)return;var on=c.classList.toggle('on');c.setAttribute('aria-pressed',on?'true':'false');});
+document.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('flip')){e.preventDefault();var on=e.target.classList.toggle('on');e.target.setAttribute('aria-pressed',on?'true':'false');}});
+</script>
 </head>
 <body>
 <template id="dc-template"><x-dc>
@@ -303,48 +320,48 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <p style="margin: 0; color: #54544F">Si buscas vender, comprar o poner en arriendo tu propiedad en San Fernando y la provincia de Colchagua, diseñamos una estrategia a tu medida. Desde calcular el valor real de tu propiedad hasta la firma del contrato. Buscamos al arrendatario o comprador correcto, lo evaluamos a fondo y preparamos toda la "papeleria" para que tú no tengas que preocuparte de los trámites. Te acompañamos desde la primera visita hasta la entrega de tus llaves.</p>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Venta: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path><path d="M10 20v-6h4v6"></path></svg>
 </span>
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Venta</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Nuestro equipo te ayudará a comercializar tu propiedad de la manera correcta y con el público adecuado.</p>
-</div>
-<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Venta</h3><ul><li>Cálculo del valor real</li><li>Estrategia de venta a tu medida</li><li>Búsqueda del comprador adecuado</li><li>Evaluación del comprador y papelería</li><li>Acompañamiento hasta la firma</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Arriendo: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"></circle><path d="M11 12l9-9"></path><path d="M17 6l3 3"></path><path d="M14 9l2 2"></path></svg>
 </span>
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Arriendo</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Si buscas arriendo o quieres arrendar tu propiedad, puedes dejar en nuestras manos todo el proceso</p>
-</div>
-<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Arriendo</h3><ul><li>Búsqueda del arrendatario</li><li>Evaluación cuidadosa de cada postulante</li><li>Contratos y papelería</li><li>Seguimiento durante el arriendo</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Tasaciones: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="M8 15l4-4 3 3 5-6"></path></svg>
 </span>
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Tasaciones</h3>
 <p style="margin:0;color:#54544F;font-size:15px">¿Quieres conocer el valor de tu propiedad? Solicita una tasación</p>
-</div>
-<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Tasaciones</h3><ul><li>Conocer el valor real de tu propiedad</li><li>Punto de partida para vender o arrendar</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Administración: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
 </span>
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Administración</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Si quieres olvidarte de administrar una propiedad, hazlo. Nosotros nos hacemos cargo de todo</p>
-</div>
-<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Administración</h3><ul><li>Nos hacemos cargo de todo</li><li>Contratos y seguimiento</li><li>Cuidado de tu propiedad</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Compra: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6"></path><circle cx="9" cy="20" r="1.2"></circle><circle cx="17" cy="20" r="1.2"></circle></svg>
 </span>
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Compra</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Si buscas comprar una propiedad, te acompañamos en la búsqueda y en todo el proceso hasta que recibas tus llaves</p>
-</div>
-<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Compra</h3><ul><li>Búsqueda de la propiedad adecuada</li><li>Acompañamiento en todo el proceso</li><li>Trámites y papelería</li><li>Hasta la entrega de tus llaves</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Asesoría legal: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16"></path><path d="M8 20h8"></path><path d="M5 7h14"></path><path d="M5 7l-3 7a3.5 3.5 0 0 0 6 0z"></path><path d="M19 7l-3 7a3.5 3.5 0 0 0 6 0z"></path></svg>
 </span>
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Asesoría legal</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Revisamos y preparamos contratos y documentos para que tu operación sea segura y sin sorpresas</p>
-</div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Asesoría legal</h3><ul><li>Revisión de contratos y documentos</li><li>Preparación de documentos</li><li>Operaciones seguras y sin sorpresas</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
 </div>
 </div>
 </section>
@@ -1034,48 +1051,48 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <p style="margin: 0; color: #54544F">Si buscas vender, comprar o poner en arriendo tu propiedad en San Fernando y la provincia de Colchagua, diseñamos una estrategia a tu medida. Desde calcular el valor real de tu propiedad hasta la firma del contrato. Buscamos al arrendatario o comprador correcto, lo evaluamos a fondo y preparamos toda la "papeleria" para que tú no tengas que preocuparte de los trámites. Te acompañamos desde la primera visita hasta la entrega de tus llaves.</p>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Venta: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path><path d="M10 20v-6h4v6"></path></svg>
 </span>
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Venta</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Nuestro equipo te ayudará a comercializar tu propiedad de la manera correcta y con el público adecuado.</p>
-</div>
-<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Venta</h3><ul><li>Cálculo del valor real</li><li>Estrategia de venta a tu medida</li><li>Búsqueda del comprador adecuado</li><li>Evaluación del comprador y papelería</li><li>Acompañamiento hasta la firma</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Arriendo: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"></circle><path d="M11 12l9-9"></path><path d="M17 6l3 3"></path><path d="M14 9l2 2"></path></svg>
 </span>
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Arriendo</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Si buscas arriendo o quieres arrendar tu propiedad, puedes dejar en nuestras manos todo el proceso</p>
-</div>
-<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Arriendo</h3><ul><li>Búsqueda del arrendatario</li><li>Evaluación cuidadosa de cada postulante</li><li>Contratos y papelería</li><li>Seguimiento durante el arriendo</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Tasaciones: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="M8 15l4-4 3 3 5-6"></path></svg>
 </span>
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Tasaciones</h3>
 <p style="margin:0;color:#54544F;font-size:15px">¿Quieres conocer el valor de tu propiedad? Solicita una tasación</p>
-</div>
-<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Tasaciones</h3><ul><li>Conocer el valor real de tu propiedad</li><li>Punto de partida para vender o arrendar</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Administración: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
 </span>
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Administración</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Si quieres olvidarte de administrar una propiedad, hazlo. Nosotros nos hacemos cargo de todo</p>
-</div>
-<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Administración</h3><ul><li>Nos hacemos cargo de todo</li><li>Contratos y seguimiento</li><li>Cuidado de tu propiedad</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Compra: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6"></path><circle cx="9" cy="20" r="1.2"></circle><circle cx="17" cy="20" r="1.2"></circle></svg>
 </span>
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Compra</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Si buscas comprar una propiedad, te acompañamos en la búsqueda y en todo el proceso hasta que recibas tus llaves</p>
-</div>
-<div style="flex:1 1 240px;background:#E4E4E0;border-radius:14px;border:1px solid #E4E4E0;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Compra</h3><ul><li>Búsqueda de la propiedad adecuada</li><li>Acompañamiento en todo el proceso</li><li>Trámites y papelería</li><li>Hasta la entrega de tus llaves</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Asesoría legal: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16"></path><path d="M8 20h8"></path><path d="M5 7h14"></path><path d="M5 7l-3 7a3.5 3.5 0 0 0 6 0z"></path><path d="M19 7l-3 7a3.5 3.5 0 0 0 6 0z"></path></svg>
 </span>
 <h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px">Asesoría legal</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Revisamos y preparamos contratos y documentos para que tu operación sea segura y sin sorpresas</p>
-</div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Asesoría legal</h3><ul><li>Revisión de contratos y documentos</li><li>Preparación de documentos</li><li>Operaciones seguras y sin sorpresas</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
 </div>
 </div>
 </section>
