@@ -20,7 +20,7 @@ select,input,textarea{max-width:100%;box-sizing:border-box}
 <link rel="icon" type="image/png" href="img/da6e98259b93e488ce781392c8cd0189.png">
 <meta name="description" content="JR Propiedades: venta, arriendo y administración de propiedades en San Fernando y la Región de O’Higgins.">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;display=swap">
 <style>
 body{margin:0}
 a{color:inherit;text-decoration:none}
@@ -40,17 +40,17 @@ header{position:sticky;top:0;z-index:1000}
 .hdr-burger{order:2 !important}
 .hdr-in{flex-wrap:nowrap !important;justify-content:space-between !important;align-items:center !important;gap:12px !important}
 .hdr-in img{height:84px !important}
-.hdr-burger{display:inline-flex !important;align-items:center;gap:10px;height:46px;padding:0 18px;border:2px solid currentColor;border-radius:999px;background:transparent;color:inherit;cursor:pointer;font:700 15px 'DM Sans',system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.hdr-burger{display:inline-flex !important;align-items:center;gap:10px;height:46px;padding:0 18px;border:2px solid currentColor;border-radius:999px;background:transparent;color:inherit;cursor:pointer;font:700 15px 'Jost',system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase}
 .hdr-burger:hover{background:rgba(128,128,128,.18)}
 @media (max-width:820px){.hdr-in img{height:60px !important}.hdr-burger{padding:0 14px;height:42px}}
-#jr-menu{position:fixed;inset:0;z-index:2000;background:#373736;color:#FFFFFF;display:none;flex-direction:column;overflow-y:auto;font-family:'DM Sans',system-ui,sans-serif}
+#jr-menu{position:fixed;inset:0;z-index:2000;background:#373736;color:#FFFFFF;display:none;flex-direction:column;overflow-y:auto;font-family:'Jost',system-ui,sans-serif}
 #jr-menu.show{display:flex}
 #jr-menu .m-top{display:flex;align-items:center;justify-content:space-between;padding:16px clamp(16px,4vw,32px);max-width:1200px;width:100%;box-sizing:border-box;margin:0 auto}
 #jr-menu .m-top img{height:64px;width:auto;filter:brightness(0) invert(1)}
-#jr-menu .m-close{display:inline-flex;align-items:center;gap:10px;height:42px;padding:0 16px;border:2px solid #FFFFFF;border-radius:999px;background:transparent;color:#FFFFFF;cursor:pointer;font:700 15px 'DM Sans',system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+#jr-menu .m-close{display:inline-flex;align-items:center;gap:10px;height:42px;padding:0 16px;border:2px solid #FFFFFF;border-radius:999px;background:transparent;color:#FFFFFF;cursor:pointer;font:700 15px 'Jost',system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase}
 #jr-menu .m-body{flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px;padding:16px clamp(16px,4vw,32px) 40px;max-width:1200px;width:100%;box-sizing:border-box;margin:0 auto}
 #jr-menu .m-links{display:flex;flex-direction:column}
-#jr-menu .m-links a{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(28px,5vw,48px);line-height:1.15;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.16);color:#FFFFFF;text-decoration:none}
+#jr-menu .m-links a{font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,5vw,48px);line-height:1.15;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.16);color:#FFFFFF;text-decoration:none}
 #jr-menu .m-links a:hover{color:#C8963E}
 #jr-menu .m-cta{display:flex;flex-wrap:wrap;gap:12px}
 #jr-menu .m-cta a{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;font-weight:700;text-decoration:none;color:#FFFFFF;border:2px solid #FFFFFF}
@@ -142,7 +142,7 @@ document.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' '
 .vt-c{border-radius:16px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .vt-dark{background:#373736;color:#FFFFFF}
 .vt-light{background:#F5F5F3;border:1px solid #E4E4E0;color:#373736}
-.vt-c h2{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.2}
+.vt-c h2{margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.2}
 .vt-c p{margin:0}
 .vt-dark p{color:#E2E2DE}.vt-light p{color:#54544F}
 .vt-cta{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:8px;font-weight:700;transition:transform .2s ease}
@@ -151,8 +151,8 @@ document.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' '
 .vt-steps::before{content:"";position:absolute;left:19px;top:20px;bottom:20px;width:2px;background:rgba(200,150,62,.45)}
 .vt-step{display:flex;gap:16px;align-items:flex-start;position:relative;animation:vt-in .55s ease both}
 .vt-p .vt-step:nth-child(1){animation-delay:.15s}.vt-p .vt-step:nth-child(2){animation-delay:.3s}.vt-p .vt-step:nth-child(3){animation-delay:.45s}
-.vt-n{flex:none;width:40px;height:40px;border-radius:50%;background:#C8963E;color:#373736;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-weight:700;position:relative;z-index:1}
-.vt-step b{display:block;font-family:'Fraunces',Georgia,serif;font-size:18px;margin-bottom:2px}
+.vt-n{flex:none;width:40px;height:40px;border-radius:50%;background:#C8963E;color:#373736;display:flex;align-items:center;justify-content:center;font-family:'Jost',system-ui,sans-serif;font-weight:700;position:relative;z-index:1}
+.vt-step b{display:block;font-family:'Jost',system-ui,sans-serif;font-size:18px;margin-bottom:2px}
 .vt-step span{font-size:15px}
 .vt-dark .vt-step span{color:#D2D2CD}.vt-light .vt-step span{color:#54544F}
 @media (prefers-reduced-motion:reduce){.vt-p,.vt-step{animation:none}}
@@ -165,23 +165,23 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 .at-c{box-sizing:border-box;flex:1 1 240px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px;transition:transform .3s ease,border-color .3s ease,background .3s ease}
 .at-c:hover{transform:translateY(-6px);border-color:#C8963E;background:rgba(255,255,255,.08)}
 .at-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-.at-n{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:48px;line-height:1;color:transparent;-webkit-text-stroke:1.5px #C8963E}
+.at-n{font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:48px;line-height:1;color:transparent;-webkit-text-stroke:1.5px #C8963E}
 .at-ic{width:46px;height:46px;border-radius:12px;background:#C8963E;display:flex;align-items:center;justify-content:center;flex:none;transition:transform .3s ease}
 .at-c:hover .at-ic{transform:rotate(-8deg) scale(1.08)}
-.at-c h3{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:20px;color:#FFFFFF}
+.at-c h3{margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:20px;color:#FFFFFF}
 .at-c p{margin:0;color:#D2D2CD;font-size:15px}
 .at-btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;font-weight:700}
 </style>
 <style id="type-css">
-h1,h2,h3{letter-spacing:-0.01em;font-optical-sizing:auto}
-h1,h2{font-weight:600}
-.at-n{font-weight:600}
+h1,h2,h3{letter-spacing:0.01em !important;font-weight:500 !important}
+.at-n{font-weight:500}
+body{font-size:17px}
 </style>
 </head>
 <body>
 <template id="dc-template"><x-dc>
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;display=swap">
 <style>
 body{margin:0}
 a{color:inherit;text-decoration:none}
@@ -189,7 +189,7 @@ a:hover{text-decoration:underline}
 select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:3px solid #373736;outline-offset:2px}
 </style>
 </helmet>
-<div style="width:100%;background:#FFFFFF;color:#373736;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.5">
+<div style="width:100%;background:#FFFFFF;color:#373736;font-family:'Jost',system-ui,sans-serif;font-size:16px;line-height:1.5">
 
 <!-- Barra superior -->
 <header class="hdr-over" style="color:#FFFFFF">
@@ -219,7 +219,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="max-width:1200px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px) clamp(48px,7vw,80px);display:flex;flex-direction:column;gap:32px">
 <div style="display:flex;flex-direction:column;gap:16px;max-width:760px">
 <p style="margin: 0; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 14px; color: {{accent}}; max-width: 100%">Gestión inmobiliaria personalizada para la Región de O’Higgins</p>
-<h1 style="margin: 0; font-family: 'Fraunces',Georgia,serif; font-weight: 700; font-size: clamp(36px,5vw,60px); line-height: 1.1; max-width: 100%">Encuentra tu próximo hogar</h1>
+<h1 style="margin: 0; font-family: 'Jost',system-ui,sans-serif; font-weight: 700; font-size: clamp(36px,5vw,60px); line-height: 1.1; max-width: 100%">Encuentra tu próximo hogar</h1>
 <p style="margin:0;font-size:18px;color:#E2E2DE">Vendemos, arrendamos y administramos tu propiedad con un plan hecho a tu medida, para que se concrete rápido y en las mejores condiciones.</p>
 <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px">
 <a href="#propiedades" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;background:{{accent}};color:#373736;font-weight:700">Ver propiedades</a>
@@ -272,7 +272,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px);display:flex;flex-direction:column;gap:32px">
 <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px">
 <div style="display:flex;flex-direction:column;gap:8px">
-<h2 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Propiedades destacadas</h2>
+<h2 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Propiedades destacadas</h2>
 <p style="margin:0;color:#54544F">Una selección de lo que tenemos disponible hoy.</p>
 </div>
 <a href="#propiedades" style="font-weight:700;border-bottom:2px solid {{accent}};padding-bottom:2px">Ver todas las propiedades</a>
@@ -296,9 +296,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 </sc-if>
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="{{p.href}}">{{p.titulo}}</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="{{p.href}}">{{p.titulo}}</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">{{p.ubicacion}}</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">{{p.precio}}</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">{{p.precio}}</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -347,7 +347,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px,7vw,88px) clamp(16px,4vw,32px); display: flex; flex-direction: column; gap: 32px; position: relative">
 <div style="display:flex;flex-direction:column;gap:8px;max-width:640px">
 <span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#54544F">Qué hacemos</span>
-<h2 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Nuestros Servicios</h2>
+<h2 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Nuestros Servicios</h2>
 <p style="margin: 0; color: #54544F">Si buscas vender, comprar o poner en arriendo tu propiedad en San Fernando y la provincia de Colchagua, diseñamos una estrategia a tu medida. Desde calcular el valor real de tu propiedad hasta la firma del contrato. Buscamos al arrendatario o comprador correcto, lo evaluamos a fondo y preparamos toda la "papeleria" para que tú no tengas que preocuparte de los trámites. Te acompañamos desde la primera visita hasta la entrega de tus llaves.</p>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:24px">
@@ -355,44 +355,44 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path><path d="M10 20v-6h4v6"></path></svg>
 </span>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px">Venta</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px">Venta</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Nuestro equipo te ayudará a comercializar tu propiedad de la manera correcta y con el público adecuado.</p>
-<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:#FFFFFF">Venta</h3><ul><li>Cálculo del valor real</li><li>Estrategia de venta a tu medida</li><li>Búsqueda del comprador adecuado</li><li>Evaluación del comprador y papelería</li><li>Acompañamiento hasta la firma</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Venta</h3><ul><li>Cálculo del valor real</li><li>Estrategia de venta a tu medida</li><li>Búsqueda del comprador adecuado</li><li>Evaluación del comprador y papelería</li><li>Acompañamiento hasta la firma</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
 <div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Arriendo: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"></circle><path d="M11 12l9-9"></path><path d="M17 6l3 3"></path><path d="M14 9l2 2"></path></svg>
 </span>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px">Arriendo</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px">Arriendo</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Si buscas arriendo o quieres arrendar tu propiedad, puedes dejar en nuestras manos todo el proceso</p>
-<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:#FFFFFF">Arriendo</h3><ul><li>Búsqueda del arrendatario</li><li>Evaluación cuidadosa de cada postulante</li><li>Contratos y papelería</li><li>Seguimiento durante el arriendo</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Arriendo</h3><ul><li>Búsqueda del arrendatario</li><li>Evaluación cuidadosa de cada postulante</li><li>Contratos y papelería</li><li>Seguimiento durante el arriendo</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
 <div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Tasaciones: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="M8 15l4-4 3 3 5-6"></path></svg>
 </span>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px">Tasaciones</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px">Tasaciones</h3>
 <p style="margin:0;color:#54544F;font-size:15px">¿Quieres conocer el valor de tu propiedad? Solicita una tasación</p>
-<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:#FFFFFF">Tasaciones</h3><ul><li>Conocer el valor real de tu propiedad</li><li>Punto de partida para vender o arrendar</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Tasaciones</h3><ul><li>Conocer el valor real de tu propiedad</li><li>Punto de partida para vender o arrendar</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
 <div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Administración: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
 </span>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px">Administración</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px">Administración</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Si quieres olvidarte de administrar una propiedad, hazlo. Nosotros nos hacemos cargo de todo</p>
-<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:#FFFFFF">Administración</h3><ul><li>Nos hacemos cargo de todo</li><li>Contratos y seguimiento</li><li>Cuidado de tu propiedad</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Administración</h3><ul><li>Nos hacemos cargo de todo</li><li>Contratos y seguimiento</li><li>Cuidado de tu propiedad</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
 <div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Compra: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6"></path><circle cx="9" cy="20" r="1.2"></circle><circle cx="17" cy="20" r="1.2"></circle></svg>
 </span>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px">Compra</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px">Compra</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Si buscas comprar una propiedad, te acompañamos en la búsqueda y en todo el proceso hasta que recibas tus llaves</p>
-<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:#FFFFFF">Compra</h3><ul><li>Búsqueda de la propiedad adecuada</li><li>Acompañamiento en todo el proceso</li><li>Trámites y papelería</li><li>Hasta la entrega de tus llaves</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Compra</h3><ul><li>Búsqueda de la propiedad adecuada</li><li>Acompañamiento en todo el proceso</li><li>Trámites y papelería</li><li>Hasta la entrega de tus llaves</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
 <div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Asesoría legal: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:{{accent}};display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16"></path><path d="M8 20h8"></path><path d="M5 7h14"></path><path d="M5 7l-3 7a3.5 3.5 0 0 0 6 0z"></path><path d="M19 7l-3 7a3.5 3.5 0 0 0 6 0z"></path></svg>
 </span>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px">Asesoría legal</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px">Asesoría legal</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Revisamos y preparamos contratos y documentos para que tu operación sea segura y sin sorpresas</p>
-<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:#FFFFFF">Asesoría legal</h3><ul><li>Revisión de contratos y documentos</li><li>Preparación de documentos</li><li>Operaciones seguras y sin sorpresas</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Asesoría legal</h3><ul><li>Revisión de contratos y documentos</li><li>Preparación de documentos</li><li>Operaciones seguras y sin sorpresas</li></ul><a href="#contacto" style="background:{{accent}}">Consultar</a></div></div></div>
 </div>
 </div>
 </section>
@@ -409,7 +409,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px);display:flex;flex-direction:column;gap:32px">
 <div style="display:flex;flex-direction:column;gap:8px;max-width:640px">
 <span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:{{accent}}">Cómo trabajamos</span>
-<h2 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Así trabajamos</h2>
+<h2 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Así trabajamos</h2>
 </div>
 <div class="at-grid">
 <div class="at-c"><div class="at-top"><span class="at-n">01</span><span class="at-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"></path></svg></span></div><h3>Atención directa</h3><p>Hablas siempre con la misma persona, de principio a fin.</p></div>
@@ -431,13 +431,13 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <img src="img/b4e67945e0fc27e9ba670441694e0d71.jpg" alt="Corredora de JR Propiedades sosteniendo un juego de llaves" style="width:100%;height:100%;min-height:380px;object-fit:cover;object-position:50% 25%;display:block">
 </div>
 <div style="display:flex;flex-direction:column;gap:4px">
-<span style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:20px;color:#373736">Laura Jessica Reyes Mondaca</span>
+<span style="font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:20px;color:#373736">Laura Jessica Reyes Mondaca</span>
 <span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#C8963E">Directora Ejecutiva</span>
 </div>
 </div>
 <div style="flex:1 1 420px;display:flex;flex-direction:column;gap:18px">
 <span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#54544F">Nosotros</span>
-<h2 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Gestión a escala humana<br>y compromiso personal</h2>
+<h2 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Gestión a escala humana<br>y compromiso personal</h2>
 <p style="margin:0;color:#54544F">Para nosotros, ninguna propiedad es un número más en un catálogo. Llevamos 20 años en la región trabajando de una manera cercana: nos tomamos el tiempo de conocer tus prioridades para definir la estrategia que realmente te conviene.<br>Te acompañamos de forma directa en cada paso, negociando con criterio comercial y cuidando cada aspecto del negocio a fin de lograr un cierre ágil y exento de problemas.&nbsp;</p>
 <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
 <li style="display:flex;gap:12px;align-items:flex-start">
@@ -464,7 +464,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px,7vw,88px) clamp(16px,4vw,32px); display: flex; flex-wrap: wrap; gap: 40px; position: relative">
 <div style="flex:1 1 360px;display:flex;flex-direction:column;gap:18px">
 <span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#C8963E">Contacto</span>
-<h2 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">¿Quieres vender tu propiedad?</h2>
+<h2 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">¿Quieres vender tu propiedad?</h2>
 <p style="margin:0;color:#E2E2DE"><span style="color: rgb(255, 255, 255); font-family: Jost, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif; font-size: 17px; background-color: rgb(46, 46, 48)">Déjanos tus datos y un agente te contactará a la brevedad para diseñar la estrategia de tu propiedad.</span></p>
 <div style="display:flex;flex-direction:column;gap:10px;color:#E2E2DE">
 <a href="tel:+56990704040" style="color:#E2E2DE">+56 9 9070 4040</a>
@@ -478,7 +478,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
 <p role="status" style="margin:0;padding:16px;border-radius:10px;background:#F5F5F3;border:1px solid #E4E4E0;font-weight:700">¡Gracias! Hemos recibido tu consulta. Pronto nos pondremos en contacto.</p>
 </sc-if>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">Registra tus datos</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">Registra tus datos</h3>
 <div style="display:flex;flex-direction:column;gap:6px"><label for="nombre" style="font-weight:700;font-size:14px">Nombre completo</label><input id="nombre" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
 <div style="display:flex;flex-direction:column;gap:6px"><label for="correo" style="font-weight:700;font-size:14px">Correo electrónico</label><input id="correo" type="email" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
 <div style="display:flex;flex-direction:column;gap:6px"><label for="telefono" style="font-weight:700;font-size:14px">Teléfono</label><input id="telefono" type="tel" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
@@ -519,7 +519,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 </x-dc></template>
 <div id="app">
 
-<div style="width:100%;background:#FFFFFF;color:#373736;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.5">
+<div style="width:100%;background:#FFFFFF;color:#373736;font-family:'Jost',system-ui,sans-serif;font-size:16px;line-height:1.5">
 
 
 <header class="hdr-over" style="color:#FFFFFF">
@@ -549,7 +549,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="max-width:1200px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,4vw,32px) clamp(48px,7vw,80px);display:flex;flex-direction:column;gap:32px">
 <div style="display:flex;flex-direction:column;gap:16px;max-width:760px">
 <p style="margin: 0; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 14px; color: #C8963E; max-width: 100%">Gestión inmobiliaria personalizada para la Región de O’Higgins</p>
-<h1 style="margin: 0; font-family: 'Fraunces',Georgia,serif; font-weight: 700; font-size: clamp(36px,5vw,60px); line-height: 1.1; max-width: 100%">Encuentra tu próximo hogar</h1>
+<h1 style="margin: 0; font-family: 'Jost',system-ui,sans-serif; font-weight: 700; font-size: clamp(36px,5vw,60px); line-height: 1.1; max-width: 100%">Encuentra tu próximo hogar</h1>
 <p style="margin:0;font-size:18px;color:#E2E2DE">Vendemos, arrendamos y administramos tu propiedad con un plan hecho a tu medida, para que se concrete rápido y en las mejores condiciones.</p>
 <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px">
 <a href="#propiedades" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;background:#C8963E;color:#373736;font-weight:700">Ver propiedades</a>
@@ -602,7 +602,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px);display:flex;flex-direction:column;gap:32px">
 <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px">
 <div style="display:flex;flex-direction:column;gap:8px">
-<h2 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Propiedades destacadas</h2>
+<h2 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Propiedades destacadas</h2>
 <p style="margin:0;color:#54544F">Una selección de lo que tenemos disponible hoy.</p>
 </div>
 <a href="#propiedades" style="font-weight:700;border-bottom:2px solid #C8963E;padding-bottom:2px">Ver todas las propiedades</a>
@@ -622,9 +622,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha.dc.html">Casa Guisepe Bartoluzzi</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha.dc.html">Casa Guisepe Bartoluzzi</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">$ 1.500.000</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">$ 1.500.000</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -659,9 +659,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha2.dc.html">2D 2B Departamento, Alto San Fernando</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha2.dc.html">2D 2B Departamento, Alto San Fernando</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">UF 5.400</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">UF 5.400</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -696,9 +696,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha3.dc.html">Departamento Tipo 2B, Edificio Alcázar</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha3.dc.html">Departamento Tipo 2B, Edificio Alcázar</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">UF 6.800</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">UF 6.800</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -733,9 +733,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha4.dc.html">Departamento Tipo 4, Edificio Alcázar</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha4.dc.html">Departamento Tipo 4, Edificio Alcázar</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">UF 6.900</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">UF 6.900</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -770,9 +770,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha5.dc.html">Departamento Tipo 5, Edificio Alcázar</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha5.dc.html">Departamento Tipo 5, Edificio Alcázar</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">UF 6.900</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">UF 6.900</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -807,9 +807,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha7.dc.html">Departamento 2D 2B E B, Edificio Alto San Fernando</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha7.dc.html">Departamento 2D 2B E B, Edificio Alto San Fernando</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">$ 540.000</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">$ 540.000</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -844,9 +844,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha8.dc.html">Departamento 2D 2B y E, Edificio Alto San Fernando</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha8.dc.html">Departamento 2D 2B y E, Edificio Alto San Fernando</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">$ 619.638</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">$ 619.638</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -881,9 +881,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha9.dc.html">Departamento 3D 2B y E, Condominio Puerta del Sur</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha9.dc.html">Departamento 3D 2B y E, Condominio Puerta del Sur</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">UF 2.671</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">UF 2.671</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -918,9 +918,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha10.dc.html">Departamento 2D 2B y E, Condominio Puerta del Sur</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha10.dc.html">Departamento 2D 2B y E, Condominio Puerta del Sur</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">$ 400.000</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">$ 400.000</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -955,9 +955,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha11.dc.html">Departamento 3D 2B y E Amoblado, Condominio Puerta del Sur</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha11.dc.html">Departamento 3D 2B y E Amoblado, Condominio Puerta del Sur</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">$ 680.000</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">$ 680.000</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -992,9 +992,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha12.dc.html">Departamento 2D 2B y E, Condominio Don Olegario</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha12.dc.html">Departamento 2D 2B y E, Condominio Don Olegario</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">San Fernando, Región del Libertador Bernardo O’Higgins</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">$ 400.000</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">$ 400.000</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -1029,9 +1029,9 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 
 </div>
 <div style="padding:20px;display:flex;flex-direction:column;gap:10px">
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha6.dc.html">Casa Condominio Parcelación Ecológica</a></h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.3"><a href="Ficha6.dc.html">Casa Condominio Parcelación Ecológica</a></h3>
 <p style="margin:0;color:#54544F;font-size:15px">Camino a Los Maquis, Pelequén, Región del Libertador Bernardo O’Higgins</p>
-<p style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">UF 11.200</p>
+<p style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">UF 11.200</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;border-top:1px solid #E4E4E0;color:#54544F;font-size:15px">
 <span style="display:inline-flex;align-items:center;gap:6px">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"></path><path d="M3 15h18"></path><path d="M7 9V6h10v3"></path></svg>
@@ -1080,7 +1080,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px,7vw,88px) clamp(16px,4vw,32px); display: flex; flex-direction: column; gap: 32px; position: relative">
 <div style="display:flex;flex-direction:column;gap:8px;max-width:640px">
 <span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#54544F">Qué hacemos</span>
-<h2 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Nuestros Servicios</h2>
+<h2 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Nuestros Servicios</h2>
 <p style="margin: 0; color: #54544F">Si buscas vender, comprar o poner en arriendo tu propiedad en San Fernando y la provincia de Colchagua, diseñamos una estrategia a tu medida. Desde calcular el valor real de tu propiedad hasta la firma del contrato. Buscamos al arrendatario o comprador correcto, lo evaluamos a fondo y preparamos toda la "papeleria" para que tú no tengas que preocuparte de los trámites. Te acompañamos desde la primera visita hasta la entrega de tus llaves.</p>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:24px">
@@ -1088,44 +1088,44 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path><path d="M10 20v-6h4v6"></path></svg>
 </span>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px">Venta</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px">Venta</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Nuestro equipo te ayudará a comercializar tu propiedad de la manera correcta y con el público adecuado.</p>
-<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:#FFFFFF">Venta</h3><ul><li>Cálculo del valor real</li><li>Estrategia de venta a tu medida</li><li>Búsqueda del comprador adecuado</li><li>Evaluación del comprador y papelería</li><li>Acompañamiento hasta la firma</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Venta</h3><ul><li>Cálculo del valor real</li><li>Estrategia de venta a tu medida</li><li>Búsqueda del comprador adecuado</li><li>Evaluación del comprador y papelería</li><li>Acompañamiento hasta la firma</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
 <div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Arriendo: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"></circle><path d="M11 12l9-9"></path><path d="M17 6l3 3"></path><path d="M14 9l2 2"></path></svg>
 </span>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px">Arriendo</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px">Arriendo</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Si buscas arriendo o quieres arrendar tu propiedad, puedes dejar en nuestras manos todo el proceso</p>
-<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:#FFFFFF">Arriendo</h3><ul><li>Búsqueda del arrendatario</li><li>Evaluación cuidadosa de cada postulante</li><li>Contratos y papelería</li><li>Seguimiento durante el arriendo</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Arriendo</h3><ul><li>Búsqueda del arrendatario</li><li>Evaluación cuidadosa de cada postulante</li><li>Contratos y papelería</li><li>Seguimiento durante el arriendo</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
 <div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Tasaciones: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="M8 15l4-4 3 3 5-6"></path></svg>
 </span>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px">Tasaciones</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px">Tasaciones</h3>
 <p style="margin:0;color:#54544F;font-size:15px">¿Quieres conocer el valor de tu propiedad? Solicita una tasación</p>
-<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:#FFFFFF">Tasaciones</h3><ul><li>Conocer el valor real de tu propiedad</li><li>Punto de partida para vender o arrendar</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Tasaciones</h3><ul><li>Conocer el valor real de tu propiedad</li><li>Punto de partida para vender o arrendar</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
 <div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Administración: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
 </span>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px">Administración</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px">Administración</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Si quieres olvidarte de administrar una propiedad, hazlo. Nosotros nos hacemos cargo de todo</p>
-<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:#FFFFFF">Administración</h3><ul><li>Nos hacemos cargo de todo</li><li>Contratos y seguimiento</li><li>Cuidado de tu propiedad</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Administración</h3><ul><li>Nos hacemos cargo de todo</li><li>Contratos y seguimiento</li><li>Cuidado de tu propiedad</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
 <div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Compra: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6"></path><circle cx="9" cy="20" r="1.2"></circle><circle cx="17" cy="20" r="1.2"></circle></svg>
 </span>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px">Compra</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px">Compra</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Si buscas comprar una propiedad, te acompañamos en la búsqueda y en todo el proceso hasta que recibas tus llaves</p>
-<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:#FFFFFF">Compra</h3><ul><li>Búsqueda de la propiedad adecuada</li><li>Acompañamiento en todo el proceso</li><li>Trámites y papelería</li><li>Hasta la entrega de tus llaves</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Compra</h3><ul><li>Búsqueda de la propiedad adecuada</li><li>Acompañamiento en todo el proceso</li><li>Trámites y papelería</li><li>Hasta la entrega de tus llaves</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
 <div class="flip" tabindex="0" role="button" aria-pressed="false" aria-label="Asesoría legal: ver detalle"><div class="flip-in"><div class="flip-f">
 <span style="width:44px;height:44px;border-radius:10px;background:#C8963E;display:flex;align-items:center;justify-content:center">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16"></path><path d="M8 20h8"></path><path d="M5 7h14"></path><path d="M5 7l-3 7a3.5 3.5 0 0 0 6 0z"></path><path d="M19 7l-3 7a3.5 3.5 0 0 0 6 0z"></path></svg>
 </span>
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px">Asesoría legal</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px">Asesoría legal</h3>
 <p style="margin:0;color:#54544F;font-size:15px">Revisamos y preparamos contratos y documentos para que tu operación sea segura y sin sorpresas</p>
-<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:18px;color:#FFFFFF">Asesoría legal</h3><ul><li>Revisión de contratos y documentos</li><li>Preparación de documentos</li><li>Operaciones seguras y sin sorpresas</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
+<span class="flip-hint">Ver detalle ↻</span></div><div class="flip-b"><h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:18px;color:#FFFFFF">Asesoría legal</h3><ul><li>Revisión de contratos y documentos</li><li>Preparación de documentos</li><li>Operaciones seguras y sin sorpresas</li></ul><a href="#contacto" style="background:#C8963E">Consultar</a></div></div></div>
 </div>
 </div>
 </section>
@@ -1142,7 +1142,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="max-width:1200px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,32px);display:flex;flex-direction:column;gap:32px">
 <div style="display:flex;flex-direction:column;gap:8px;max-width:640px">
 <span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#C8963E">Cómo trabajamos</span>
-<h2 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Así trabajamos</h2>
+<h2 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Así trabajamos</h2>
 </div>
 <div class="at-grid">
 <div class="at-c"><div class="at-top"><span class="at-n">01</span><span class="at-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#373736" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"></path></svg></span></div><h3>Atención directa</h3><p>Hablas siempre con la misma persona, de principio a fin.</p></div>
@@ -1164,13 +1164,13 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <img src="img/b4e67945e0fc27e9ba670441694e0d71.jpg" alt="Corredora de JR Propiedades sosteniendo un juego de llaves" style="width:100%;height:100%;min-height:380px;object-fit:cover;object-position:50% 25%;display:block">
 </div>
 <div style="display:flex;flex-direction:column;gap:4px">
-<span style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:20px;color:#373736">Laura Jessica Reyes Mondaca</span>
+<span style="font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:20px;color:#373736">Laura Jessica Reyes Mondaca</span>
 <span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#C8963E">Directora Ejecutiva</span>
 </div>
 </div>
 <div style="flex:1 1 420px;display:flex;flex-direction:column;gap:18px">
 <span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#54544F">Nosotros</span>
-<h2 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Gestión a escala humana<br>y compromiso personal</h2>
+<h2 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">Gestión a escala humana<br>y compromiso personal</h2>
 <p style="margin:0;color:#54544F">Para nosotros, ninguna propiedad es un número más en un catálogo. Llevamos 20 años en la región trabajando de una manera cercana: nos tomamos el tiempo de conocer tus prioridades para definir la estrategia que realmente te conviene.<br>Te acompañamos de forma directa en cada paso, negociando con criterio comercial y cuidando cada aspecto del negocio a fin de lograr un cierre ágil y exento de problemas.&nbsp;</p>
 <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
 <li style="display:flex;gap:12px;align-items:flex-start">
@@ -1197,7 +1197,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 <div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px,7vw,88px) clamp(16px,4vw,32px); display: flex; flex-wrap: wrap; gap: 40px; position: relative">
 <div style="flex:1 1 360px;display:flex;flex-direction:column;gap:18px">
 <span style="font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#C8963E">Contacto</span>
-<h2 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">¿Quieres vender tu propiedad?</h2>
+<h2 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,3.5vw,40px);line-height:1.15">¿Quieres vender tu propiedad?</h2>
 <p style="margin:0;color:#E2E2DE"><span style="color: rgb(255, 255, 255); font-family: Jost, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif; font-size: 17px; background-color: rgb(46, 46, 48)">Déjanos tus datos y un agente te contactará a la brevedad para diseñar la estrategia de tu propiedad.</span></p>
 <div style="display:flex;flex-direction:column;gap:10px;color:#E2E2DE">
 <a href="tel:+56990704040" style="color:#E2E2DE">+56 9 9070 4040</a>
@@ -1209,7 +1209,7 @@ select:focus,input:focus,textarea:focus,button:focus-visible,a:focus-visible{out
 </div>
 <form id="contact-form" onsubmit="return false" style="min-width:0;max-width:100%;box-sizing:border-box;flex:1 1 400px;background:#FFFFFF;color:#373736;border-radius:16px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:16px">
 
-<h3 style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px">Registra tus datos</h3>
+<h3 style="margin:0;font-family:'Jost',system-ui,sans-serif;font-weight:700;font-size:22px">Registra tus datos</h3>
 <div style="display:flex;flex-direction:column;gap:6px"><label for="nombre" style="font-weight:700;font-size:14px">Nombre completo</label><input id="nombre" type="text" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
 <div style="display:flex;flex-direction:column;gap:6px"><label for="correo" style="font-weight:700;font-size:14px">Correo electrónico</label><input id="correo" type="email" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
 <div style="display:flex;flex-direction:column;gap:6px"><label for="telefono" style="font-weight:700;font-size:14px">Teléfono</label><input id="telefono" type="tel" style="height:48px;border:1px solid #85857F;border-radius:8px;padding:0 12px;font-size:16px;font-family:inherit;color:#373736;background:#FFFFFF"></div>
