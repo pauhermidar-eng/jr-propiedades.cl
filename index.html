@@ -1325,5 +1325,47 @@ class Component extends DCLogic {
   }
 }
 </script>
+<script id="filtro-js">
+(function(){
+  function norm(t){return (t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function apply(scroll){
+    var f=document.querySelector('form select#modalidad'); if(!f) return;
+    var form=f.closest('form');
+    var mod=norm(form.querySelector('#modalidad').value);
+    var tipo=norm(form.querySelector('#tipo').value);
+    var com=norm(form.querySelector('#comuna').value);
+    var secs=document.querySelectorAll('section#propiedades'); var sec=secs[secs.length-1]; if(!sec) return;
+    var cards=sec.querySelectorAll('article'); var shown=0;
+    cards.forEach(function(a){
+      var badge=a.querySelector('span[style*="border-radius:999px"]'); var b=norm(badge?badge.textContent:'');
+      var title=norm((a.querySelector('h3')||{}).textContent);
+      var loc=norm((a.querySelector('p')||{}).textContent);
+      var esVenta=b.indexOf('venta')>-1;
+      var ok=true;
+      if(mod.indexOf('venta')>-1 && !esVenta) ok=false;
+      if(mod.indexOf('arriendo')>-1 && esVenta) ok=false;
+      if(tipo.indexOf('todos')<0){
+        var t=tipo.split(' ')[0];
+        if(title.indexOf(t)<0) ok=false;
+      }
+      if(com.indexOf('todas')<0 && loc.indexOf(com)<0) ok=false;
+      a.style.display=ok?'':'none'; if(ok) shown++;
+    });
+    var m=document.getElementById('sin-resultados');
+    if(!m){m=document.createElement('p'); m.id='sin-resultados'; m.style.cssText='margin:0;padding:24px;background:#FFFFFF;border:1px solid #E4E4E0;border-radius:14px;color:#54544F;width:100%';
+      m.textContent='No encontramos propiedades con esos filtros. Escríbenos por WhatsApp y te ayudamos a buscar.';
+      cards[0].parentNode.appendChild(m);}
+    m.style.display=shown?'none':'block';
+    if(scroll){sec.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('form button'); if(b && b.closest('form').querySelector('#modalidad')){e.preventDefault();apply(true);}
+  });
+  document.addEventListener('change',function(e){
+    if(e.target.closest('form') && e.target.closest('form').querySelector('#modalidad') && e.target.tagName==='SELECT') apply(false);
+  });
+  document.addEventListener('submit',function(e){ if(e.target.querySelector('#modalidad')){e.preventDefault();apply(true);} });
+})();
+</script>
 </body>
 </html>
